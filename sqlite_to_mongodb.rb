@@ -5,6 +5,8 @@ gem 'activerecord'
 require 'active_record'
 require 'mongo_mapper'
 require 'open-uri'
+require 'mechanize'
+require 'nokogiri'
 
 include Mongo
 
@@ -14,6 +16,7 @@ MongoMapper.database = "mtg"
 class Card
   include MongoMapper::Document
   key :_id, String
+  key :card_set_number, Integer
   key :name, String
   key :description, String
   key :colors, Array
@@ -33,6 +36,22 @@ class Card
   key :card_set_id, String
 end
 
+class CardSet
+	include MongoMapper::Document
+	key :_id, Integer
+	key :name, String
+	key :block, String
+	key :released_at, Time
+	key :common, Integer
+	key :uncommon, Integer
+	key :rare, Integer
+	key :mythic_rare, Integer
+	key :basic_land, Integer
+	key :other, Integer
+	key :description, String
+	key :wikipedia, String
+end
+
 def get_card_img(mvid)
   open("card_images/" + mvid.to_s + ".jpeg", 'wb') do |file|
     file << open("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + 
@@ -40,12 +59,44 @@ def get_card_img(mvid)
   end
 end
 
-startdb = SQLite3::Database.new("cards.sqlite")
+def get_card_details(mvid)
+  agent = Mechanize.new
+  page = agent.get("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=" + mvid.to_s)
+doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_numberRow').to_html)
 
+if doc.at("div.value") != nil 
+    card_number = doc.at("div.value").content.to_i
+else 
+    card_number = 0
+end  
+
+card_number
+end
+
+#this could be done inside get_card_details to save a page hit
+#for now I wanted to keep the logic seprate as it is only an additional
+#72 hits
+def get_card_loyalty(mvid)
+  agent = Mechanize.new
+  page = agent.get("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=" + mvid.to_s)
+doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow').to_html)
+
+if doc.at("div.value") != nil 
+    loyalty = doc.at("div.value").content.to_i
+else 
+    loyalty = 0
+end  
+
+loyalty
+  
+end
+
+startdb = SQLite3::Database.new("cards.sqlite")
 startdb.results_as_hash = true
 startdb.execute( "select * from card" ) do |row|
    card = Card.new
    card._id = row['mvid']
+   card.card_set_number = get_card_details(card._id)
    card.name = row['cardname']
    card.description = row['cardtext']
    card.card_set = row['cardset']
@@ -54,9 +105,15 @@ startdb.execute( "select * from card" ) do |row|
    card.subtype = types.count > 1 ? types[1].strip : nil
    #row['cardtype'] #parse out subtype and loyalty points
    card.manacost = row['manacost']
-   card.loyalty = row['cardtype'][/\(.*?\)/]
+   
+   if card.type == "Planeswalker"
+     card.loyalty = get_card_loyalty(card._id)
+   else
+     card.loyalty = 0
+   end
+   
    card.convertedmanacost = row['convertedmanacost']
-   card.power = row['power']
+   card.power = row['power']  
    card.toughness = row['toughness']
    
    colors = []
@@ -94,7 +151,6 @@ startdb.execute( "select * from card" ) do |row|
    id = card.save
    
    #sleep 0.5
-   
 end
 
 
