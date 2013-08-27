@@ -7,50 +7,14 @@ require 'mongo_mapper'
 require 'open-uri'
 require 'mechanize'
 require 'nokogiri'
+load 'card.rb'
+load 'card_set.rb'
 
 include Mongo
 
 MongoMapper.connection = Mongo::Connection.new("localhost", 27017)
 MongoMapper.database = "mtg"
 
-class Card
-  include MongoMapper::Document
-  key :_id, String
-  key :card_set_number, Integer
-  key :name, String
-  key :description, String
-  key :colors, Array
-  key :manacost, String
-  key :convertedmanacost, Integer
-  key :card_set, String
-  key :type, String
-  key :subtype, String
-  key :power, Integer
-  key :toughness, Integer
-  key :loyalty, Integer
-  key :rarity, String
-  key :artist, String
-  key :card_released_at, Time
-  key :created_at, Time
-  key :modified_at, Time
-  key :card_set_id, String
-end
-
-class CardSet
-	include MongoMapper::Document
-	key :_id, Integer
-	key :name, String
-	key :block, String
-	key :released_at, Time
-	key :common, Integer
-	key :uncommon, Integer
-	key :rare, Integer
-	key :mythic_rare, Integer
-	key :basic_land, Integer
-	key :other, Integer
-	key :description, String
-	key :wikipedia, String
-end
 
 def get_card_img(mvid)
   open("card_images/" + mvid.to_s + ".jpeg", 'wb') do |file|
@@ -99,7 +63,16 @@ startdb.execute( "select * from card" ) do |row|
    card.card_set_number = get_card_details(card._id)
    card.name = row['cardname']
    card.description = row['cardtext']
-   card.card_set = row['cardset']
+   cardset = row['cardset']
+   #put them together
+   if cardset == 'Time Spiral "TimeShifted"'
+     cardset = "Time Spiral"
+   elsif cardset == 'Magic: The Gathering-Commander'
+     cardset = "Commander"
+   end
+   
+   card.card_set_name = cardset
+   
    types = row['cardtype'].split('-')
    card.type = types.count > 1 ? types[0].strip : types[0].strip
    card.subtype = types.count > 1 ? types[1].strip : nil
@@ -149,6 +122,7 @@ startdb.execute( "select * from card" ) do |row|
    end
    
    id = card.save
+   print "Saved: " + card.name + "\n"
    
    #sleep 0.5
 end

@@ -4,27 +4,14 @@ gem 'activerecord'
 require 'active_record'
 require 'mongo_mapper'
 require 'open-uri'
+load 'card.rb'
+load 'card_set.rb'
 
 include Mongo
 
 MongoMapper.connection = Mongo::Connection.new("localhost", 27017)
 MongoMapper.database = "mtg"
 
-class CardSet
-	include MongoMapper::Document
-	key :_id, String
-	key :name, String
-	key :block, String
-	key :released_at, Time
-	key :common, Integer
-	key :uncommon, Integer
-	key :rare, Integer
-	key :mythic_rare, Integer
-	key :basic_land, Integer
-	key :other, Integer
-	key :description, String
-	key :wikipedia, String
-end
 
 set1 = CardSet.new
 set1.name = "Dragon's Maze"
@@ -127,7 +114,6 @@ id = set7.save
 set8 = CardSet.new
 set8.name = "Commander"
 set8._id = "CMD"
-set8._id = "Commander"
 set8.description = 'The _Magic: The Gathering -- Commander_ release consists 
 of five different decks: "Heavenly Inferno," "Mirror Mastery," "Counterpunch," 
 "Political Puppets," and "Devour for Power." Each deck includes a 100-card 
@@ -144,7 +130,6 @@ id = set8.save
 set8b = CardSet.new
 set8b.name = "Commander's Arsenal"
 set8b._id = "CM1"
-set8b._id = "Commander"
 set8b.description = "Commander's Arsenal is a set 18 premium foil cards, 10 oversized premium foil cards, and a couple of accessories. The set was release on November 2, 2012. Each card was a reprint of a card often found in Commander or EDH decks."
 set8b.wikipedia = "http://en.wikipedia.org/wiki/Commander%27s_Arsenal#Commander.27s_Arsenal"
 set8b.common = 28
@@ -158,7 +143,6 @@ id = set8b.save
 set8c = CardSet.new
 set8c.name = "Commander (2013 Edition)"
 set8c._id = "C13"
-set8c._id = "Commander"
 set8c.description = "Commander is a series of five 100-card, three color Magic: the Gathering decks, meant as a supplement to the variant format initially known as 'Elder Dragon Highlander (EDH)'. Each deck is based around a legendary creature, called a 'Commander' or 'General'. No card other than basic lands appear more than once in each deck, and each deck contains three foil oversized legendary creature cards. This set is notable in that it is the first set printed outside of the normal booster pack expansions to have functionally new cards. There are 51 new cards, made specifically for multi-player games, featured in Commander."
 set8c.wikipedia = "http://en.wikipedia.org/wiki/Commander_(Magic:_The_Gathering)"
 set8c.common = 28
@@ -799,7 +783,7 @@ set52.released_at = "July 17, 2009"
 id = set52.save
 
 set53 = CardSet.new
-set53.name = "Core Set - Tenth Edition"
+set53.name = "Tenth Edition"
 set53._id = "10E"
 set53.description = "Tenth Edition (10th Edition) is a 'Core Set' for the collectible trading card game Magic: The Gathering. It was released on July 13, 2007, replacing Ninth Edition as the core set of cards for standard tournament play. The symbol for Tenth Edition is the Roman numeral 'X'.  As part of their 'Selecting Tenth Edition' promotion, Wizards of the Coast gave fans the chance to manage a part of the set's brand. The results gave the Roman numeral 'X' over the number '10', along with many other card, art, and flavor text choices.
 Tenth Edition was the first core set since Beta to be printed with black-bordered cards, rather than white-bordered ones. Tenth Edition is also the first core set to include legendary creatures (two of each color), bringing back flavorful relics of Magic's past such as Squee, Goblin Nabob, and Kamahl, Pit Fighter"
@@ -813,7 +797,7 @@ set53.released_at = "July 13, 2007"
 id = set53.save
 
 set54 = CardSet.new
-set54.name = "Core Set - Ninth Edition"
+set54.name = "Ninth Edition"
 set54._id = "9ED"
 set54.description = 'Ninth Edition (9th Edition) or Core Set is the fourth latest base set for the collectible trading card game, Magic: The Gathering.'
 set54.wikipedia = "http://en.wikipedia.org/wiki/9th_Edition_(Magic:_The_Gathering)"
@@ -826,7 +810,7 @@ set54.released_at = "July 29, 2005"
 id = set54.save
 
 set55 = CardSet.new
-set55.name = "Core Set - Eighth Edition"
+set55.name = "Eighth Edition"
 set55._id = "8ED"
 set55.description = "Eighth Edition (8th Edition) or Core Set was the standard base set for the collectible trading card game, Magic: The Gathering from its release in 2003 until 9th Edition's release in 2005. Its expansion symbol is the number 8 with 3 cards behind it."
 set55.wikipedia = "http://en.wikipedia.org/wiki/8th_Edition_(Magic:_The_Gathering)"
@@ -852,7 +836,7 @@ set56.released_at = "April 11, 2001"
 id = set56.save
 
 set57 = CardSet.new
-set57.name = "Classic (Sixth Edition)"
+set57.name = "Classic Sixth Edition"
 set57._id = "6ED"
 set57.description = 'The Sixth Edition core set of Magic: The Gathering, also known as Classic, was released on April 27, 1999. It contains 350 cards, with reprints of cards from previous core sets, as well as some new reprints from expansion sets through the Weatherlight expansion.'
 set57.wikipedia = "http://en.wikipedia.org/wiki/6th_Edition_(Magic:_The_Gathering)"
@@ -1269,7 +1253,7 @@ id = set82.save
 
 
 set83 = CardSet.new
-set83.name = "Battle Royale"
+set83.name = "Battle Royale Box Set"
 set83._id = "BRB"
 set83.block = ""
 set83.description = "Battle Royale was a Magic: The Gathering boxed set, the third compilation set, released in November 1999 as a collection of cards emphasizing the multiplayer aspect of the game. Most of the cards included are ones that can affect multiple opponents. This promotion included cards from all different sets that existed previous to it. The cards still retained their original expansion symbols although they were printed with white borders, which was the standard for reprinted Magic: The Gathering cards of 'core sets' until the 2007 release of Tenth Edition. These are the only sets that are printed with white borders (which started with Unlimited.) Another interesting aspect is that colored expansions symbols were added to the cards that didn’t have them previously (namely cards from Tempest, Portal: Second Age, Stronghold and Ice Age.)
@@ -1285,7 +1269,7 @@ id = set83.save
 
 
 set84 = CardSet.new
-set84.name = "Beatdown"
+set84.name = "Beatdown Box Set"
 set84._id = "BTD"
 set84.block = ""
 set84.description = "Beatdown is a box set for the card game Magic: The Gathering, and the fourth compilation set. It was created for special reprint purposes only and was not legal in Standard at the time of its release. Beatdown was released as a pair of preconstructed decks combined with accessories, unlike the normal distribution of Magic cards in randomized packs. At the time of release it sold for around $30.00 MSRP. Alternate art was done for four cards: Sengir Vampire, Erhnam Djinn, Ball Lightning, and Clockwork Beast. The set is white-bordered, and the expansion symbol is a mace. There are no White cards in the set."
@@ -1484,7 +1468,7 @@ id = set97.save
 
 set98 = CardSet.new
 set98.name = "Duel Decks: Sorin vs. Tibalt"
-set98._id = "DDH"
+set98._id = "DDK"
 set98.block = "Duel Decks"
 set98.description = ""
 set98.wikipedia = ""
@@ -1567,19 +1551,19 @@ set103.basic_land = 0
 set103.released_at = "August 31, 2012"
 id = set103.save
 
-set104 = CardSet.new
-set104.name = "From the Vault: Twenty"
-set104._id = ""
-set104.block = "From the vault"
-set104.description = "From the Vault: Twenty will be released on August 23, 2013. It will contain twenty cards, in commemoration of Magic's 20th anniversary."
-set104.wikipedia = "http://en.wikipedia.org/wiki/From_the_Vault:_Exiled"
-set104.common = 20
-set104.uncommon = 0
-set104.rare = 0
-set104.mythic_rare = 0
-set104.basic_land = 0
-set104.released_at = "August 23, 2013"
-id = set104.save
+# set104 = CardSet.new
+# set104.name = "From the Vault: Twenty"
+# set104._id = ""
+# set104.block = "From the vault"
+# set104.description = "From the Vault: Twenty will be released on August 23, 2013. It will contain twenty cards, in commemoration of Magic's 20th anniversary."
+# set104.wikipedia = "http://en.wikipedia.org/wiki/From_the_Vault:_Exiled"
+# set104.common = 20
+# set104.uncommon = 0
+# set104.rare = 0
+# set104.mythic_rare = 0
+# set104.basic_land = 0
+# set104.released_at = "August 23, 2013"
+# id = set104.save
 
 set105 = CardSet.new
 set105.name = "Premium Deck Series: Slivers"
@@ -1596,7 +1580,7 @@ set105.released_at = "November 20, 2009"
 id = set105.save
 
 set106 = CardSet.new
-set106.name = "Premium Deck Series: Fire & Lightning"
+set106.name = "Premium Deck Series: Fire and Lightning"
 set106._id = "PD2"
 set106.block = "Premium Deck Series"
 set106.description = "Premium Deck Series: Fire & Lightning was released November 19, 2010. The set was mono-red and revolved around Elemental creatures and various red spells that dealt direct damage to creatures or opponents."
@@ -1707,9 +1691,56 @@ set112.basic_land = 12
 set112.released_at = "January 10, 2011"
 id = set112.save
 
+set113 = CardSet.new
+set113.name = "Unglued"
+set113._id = "UGL"
+set113.block = "Un-sets"
+set113.description = "Unglued is the name of a Magic: The Gathering expansion set, the first silver-bordered, non-tournament-legal Magic: The Gathering expansion set released. It came out in August 1998. Its symbol is a cracked egg. Among the themes of the set were chicken, dice rolling and multiplayer Magic games."
+set113.wikipedia = "http://en.wikipedia.org/wiki/Unglued"
+set113.common = 33
+set113.uncommon = 22
+set113.rare = 28
+set113.mythic_rare = 0
+set113.basic_land = 5
+set113.released_at = "August 7, 1998"
+id = set113.save
+
+set114 = CardSet.new
+set114.name = "Unhinged"
+set114._id = "UNH"
+set114.block = "Un-sets"
+set114.description = "Unhinged is a humor and parody themed expansion set to the collectible card game Magic: The Gathering. Unhinged was released on November 19, 2004. Its tone is less serious than traditional Magic expansions. It is a follow-on to Unglued, an earlier humor themed expansion set."
+set114.wikipedia = "http://en.wikipedia.org/wiki/Unhinged_(Magic:_The_Gathering)"
+set114.common = 55
+set114.uncommon = 40
+set114.rare = 40
+set114.mythic_rare = 0
+set114.basic_land = 5
+set114.released_at = "November 20, 2004"
+id = set114.save
 
 
+#now lets relate the cards and sets 
+sets = CardSet.all
 
+sets.each do |s|
+  print "Card set: " + s.name
+  cards = Card.where(:card_set_name => s.name)
+  
+  cards.each do |c|
+    s.cards << c
+    s.card_ids << c._id
+    #print "\t\t Adding card: " + c.name + "\n"
+    #c.card_set = s
+    #s.save
+    #c.save
+  end
+  print "\tSaving:" + s.cards.count.to_s + "\n"
+  s.save
+ 
+  # card_set = CardSet.where(:_id => s._id)
+  # print "Saved:" + card_set.card_ids.count.to_s + "\n"
+end
 
 
 
