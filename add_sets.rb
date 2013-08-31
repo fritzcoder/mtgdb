@@ -450,6 +450,19 @@ set29.basic_land = 20
 set29.released_at = "October 6, 2006" 
 id = set29.save
 
+set29b = CardSet.new
+set29b.name = 'Time Spiral "Timeshifted"'
+set29b._id = "TSH"
+set29b.description = "In the Time Spiral set, timeshifted cards make up a 121-card subset comprised entirely of pre-Mirrodin reprints, tying in with the set's theme of revisiting the past. Each card in the subset features the old 7th Edition card frame and has a new purple expansion symbol to denote their unique rarity. One timeshifted card appears in every Time Spiral booster pack, making the cards roughly 50% rarer than rare cards, which also appear once per pack but comprise of only 80 cards. However, in the Time Spiral Preconstructed Decks, timeshifted cards are treated as though they had their original rarity, as each deck features several of the timeshifted cards that were originally common, including multiples of the same card."
+set29b.wikipedia = "http://wiki.mtgsalvation.com/article/Timeshifted"
+set29b.common = 121
+set29b.uncommon = 0
+set29b.rare = 0
+set29b.mythic_rare = 0
+set29b.basic_land = 0
+set29b.released_at = "October 6, 2006" 
+id = set29b.save
+
 set30 = CardSet.new
 set30.name = "Coldsnap"
 set30._id = "CSP"
@@ -1730,10 +1743,11 @@ sets.each do |s|
   cards.each do |c|
     s.cards << c
     s.card_ids << c._id
+    c.released_at = s.released_at
     #print "\t\t Adding card: " + c.name + "\n"
     #c.card_set = s
     #s.save
-    #c.save
+    c.save
   end
   print "\tSaving:" + s.cards.count.to_s + "\n"
   s.save

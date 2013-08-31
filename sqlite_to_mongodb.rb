@@ -7,6 +7,7 @@ require 'mongo_mapper'
 require 'open-uri'
 require 'mechanize'
 require 'nokogiri'
+
 load 'card.rb'
 load 'card_set.rb'
 
@@ -24,50 +25,78 @@ def get_card_img(mvid)
 end
 
 def get_card_details(mvid)
+  details = Hash.new
   agent = Mechanize.new
   page = agent.get("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=" + mvid.to_s)
 doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_numberRow').to_html)
 
 if doc.at("div.value") != nil 
-    card_number = doc.at("div.value").content.to_i
+    details["card_number"] = doc.at("div.value").content.to_i
 else 
-    card_number = 0
+    details["card_number"] = 0
 end  
 
-card_number
+doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow').to_html)
+
+if doc.at("div.value") != nil 
+    details["loyalty"] = doc.at("div.value").content.to_i
+else 
+    details["loyalty"] = 0
+end
+
+doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ArtistCredit').to_html)
+
+if doc.at("a") != nil 
+    details["artist"] = doc.at("a").content
+else 
+    details["artist"] = ""
+end
+
+doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_FlavorText').to_html)
+
+if doc.at("div.cardtextbox") != nil 
+    details["flavor"] = doc.at("div.cardtextbox").content
+else 
+    details["flavor"] = ""
+end
+
+details
 end
 
 #this could be done inside get_card_details to save a page hit
 #for now I wanted to keep the logic seprate as it is only an additional
 #72 hits
-def get_card_loyalty(mvid)
-  agent = Mechanize.new
-  page = agent.get("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=" + mvid.to_s)
-doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow').to_html)
-
-if doc.at("div.value") != nil 
-    loyalty = doc.at("div.value").content.to_i
-else 
-    loyalty = 0
-end  
-
-loyalty
-  
-end
+# def get_card_loyalty(mvid)
+#   agent = Mechanize.new
+#   page = agent.get("http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=" + mvid.to_s)
+# doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow').to_html)
+# 
+# if doc.at("div.value") != nil 
+#     loyalty = doc.at("div.value").content.to_i
+# else 
+#     loyalty = 0
+# end  
+# 
+# loyalty
+#   
+# end
 
 startdb = SQLite3::Database.new("cards.sqlite")
 startdb.results_as_hash = true
 startdb.execute( "select * from card" ) do |row|
+  
    card = Card.new
    card._id = row['mvid']
-   card.card_set_number = get_card_details(card._id)
+   details = get_card_details(card._id)
+   card.set_number = details["card_number"]
+   card.artist = details["artist"]
    card.name = row['cardname']
    card.description = row['cardtext']
+   card.flavor = details["flavor"]
    cardset = row['cardset']
+   
    #put them together
-   if cardset == 'Time Spiral "TimeShifted"'
-     cardset = "Time Spiral"
-   elsif cardset == 'Magic: The Gathering-Commander'
+   if cardset == 'Magic: The Gathering-Commander'
      cardset = "Commander"
    end
    
@@ -78,16 +107,18 @@ startdb.execute( "select * from card" ) do |row|
    card.subtype = types.count > 1 ? types[1].strip : nil
    #row['cardtype'] #parse out subtype and loyalty points
    card.manacost = row['manacost']
+   card.power = row['power']  
+   card.toughness = row['toughness']
    
    if card.type == "Planeswalker"
-     card.loyalty = get_card_loyalty(card._id)
+    card.loyalty = details["loyalty"]
+    card.power = 0 
+    card.toughness = 0
    else
      card.loyalty = 0
    end
    
    card.convertedmanacost = row['convertedmanacost']
-   card.power = row['power']  
-   card.toughness = row['toughness']
    
    colors = []
    if row['isblue'] == 1
@@ -123,8 +154,6 @@ startdb.execute( "select * from card" ) do |row|
    
    id = card.save
    print "Saved: " + card.name + "\n"
-   
-   #sleep 0.5
 end
 
 
