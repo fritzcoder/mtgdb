@@ -1572,6 +1572,20 @@ def load_sets()
   set98.basic_land = 0
   set98.released_at = "March 15, 2013"
   id = set98.save
+  
+  set98a = CardSet.new
+  set98a.name = "Duel Decks: Heroes vs. Monsters"
+  set98a._id = "DDL"
+  set98a.block = "Duel Decks"
+  set98a.description = ""
+  set98a.wikipedia = ""
+  set98a.common = 120
+  set98a.uncommon = 0
+  set98a.rare = 0
+  set98a.mythic_rare = 0
+  set98a.basic_land = 0
+  set98a.released_at = "September 6, 2013"
+  id = set98a.save
 
 
   set99 = CardSet.new
@@ -1587,7 +1601,7 @@ def load_sets()
   set99.basic_land = 0
   set99.released_at = "August 29, 2008"
   id = set99.save
-
+  
   set100 = CardSet.new
   set100.name = "From the Vault: Exiled"
   set100._id = "V09"
@@ -1644,19 +1658,19 @@ def load_sets()
   set103.released_at = "August 31, 2012"
   id = set103.save
 
-  # set104 = CardSet.new
-  # set104.name = "From the Vault: Twenty"
-  # set104._id = ""
-  # set104.block = "From the vault"
-  # set104.description = "From the Vault: Twenty will be released on August 23, 2013. It will contain twenty cards, in commemoration of Magic's 20th anniversary."
-  # set104.wikipedia = "http://en.wikipedia.org/wiki/From_the_Vault:_Exiled"
-  # set104.common = 20
-  # set104.uncommon = 0
-  # set104.rare = 0
-  # set104.mythic_rare = 0
-  # set104.basic_land = 0
-  # set104.released_at = "August 23, 2013"
-  # id = set104.save
+  set104 = CardSet.new
+  set104.name = "From the Vault: Twenty"
+  set104._id = "V13"
+  set104.block = "From the vault"
+  set104.description = "From the Vault: Twenty will be released on August 23, 2013. It will contain twenty cards, in commemoration of Magic's 20th anniversary."
+  set104.wikipedia = "http://en.wikipedia.org/wiki/From_the_Vault:_Exiled"
+  set104.common = 20
+  set104.uncommon = 0
+  set104.rare = 0
+  set104.mythic_rare = 0
+  set104.basic_land = 0
+  set104.released_at = "August 23, 2013"
+  id = set104.save
 
   set105 = CardSet.new
   set105.name = "Premium Deck Series: Slivers"
@@ -1811,8 +1825,21 @@ def load_sets()
   set114.basic_land = 5
   set114.released_at = "November 20, 2004"
   id = set114.save
-
-
+  
+  set115 = CardSet.new
+  set115.name = "Theros"
+  set115._id = "THS"
+  set115.block = "Theros"
+  set115.description = ""
+  set115.wikipedia = "249"
+  set115.common = 0
+  set115.uncommon = 0
+  set115.rare = 0
+  set115.mythic_rare = 0
+  set115.basic_land = 0
+  set115.released_at = "September 27, 2013"
+  id = set115.save
+  
   #now lets relate the cards and sets 
   sets = CardSet.all
 
