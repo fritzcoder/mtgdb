@@ -405,7 +405,7 @@ def load_sets()
   set25 = CardSet.new
   set25.name = "Lorwyn"
   set25.block = "Lorwyn"
-  set25._id = "LWR"
+  set25._id = "LRW"
   set25.description = 'Lorwyn is the 66th Magic: The Gathering set, 43rd expert level set, and the first set in the Lorwyn Block, released in October 2007. It is codenamed "Peanut". The pre-release events for this set were held on September 29–30, 2007'
   set25.wikipedia = "http://en.wikipedia.org/wiki/Lorwyn"
   set25.common = 121
