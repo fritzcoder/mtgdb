@@ -57,7 +57,9 @@ def get_card_details(mvid)
   doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_FlavorText').to_html)
 
   if doc.at("div.cardtextbox") != nil 
-    details["flavor"] = doc.at("div.cardtextbox").content
+    flavor = ""
+    doc.search("div.cardtextbox").each{ |x| flavor = flavor + " " + x.content }
+    details["flavor"] = flavor
   else 
     details["flavor"] = ""
   end
@@ -142,9 +144,8 @@ startdb.execute( "select * from card" ) do |row|
      id = card.save
      print "Saved: " + card.name + "\n"
   else
-     print "Exists: " + row['cardname'] + "\n"   
+        print "Exists: " + row['cardname'] + "\n"   
   end
-  
 end
 
 #load sets
