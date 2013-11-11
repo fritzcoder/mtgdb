@@ -149,7 +149,7 @@ def load_sets()
   id = set8b.save
 
   set8c = CardSet.new
-  set8c.name = "Commander (2013 Edition)"
+  set8c.name = "Commander 2013 Edition"
   set8c.block = "Commander"
   set8c._id = "C13"
   set8c.description = "Commander is a series of five 100-card, three color Magic: the Gathering decks, meant as a supplement to the variant format initially known as 'Elder Dragon Highlander (EDH)'. Each deck is based around a legendary creature, called a 'Commander' or 'General'. No card other than basic lands appear more than once in each deck, and each deck contains three foil oversized legendary creature cards. This set is notable in that it is the first set printed outside of the normal booster pack expansions to have functionally new cards. There are 51 new cards, made specifically for multi-player games, featured in Commander."
