@@ -33,9 +33,9 @@ def get_card_details(mvid)
   doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_numberRow').to_html)
 
   if doc.at("div.value") != nil 
-    details["card_number"] = doc.at("div.value").content.to_i
+    details["cardNumber"] = doc.at("div.value").content.to_i
   else 
-    details["card_number"] = 0
+    details["cardNumber"] = 0
   end  
 
   doc = Nokogiri::HTML( page.search('#ctl00_ctl00_ctl00_MainContent_SubContent_SubContent_ptRow').to_html)
@@ -72,12 +72,16 @@ startdb.results_as_hash = true
 startdb.execute( "select * from card" ) do |row|
   
    exists = Card.find(row['mvid'])
+   if exists
+     Card.delete(row['mvid'])
+   end
+     
    
-   if exists == nil
+   #if exists == nil
      card = Card.new
      card._id = row['mvid']
      details = get_card_details(card._id)
-     card.set_number = details["card_number"]
+     card.setNumber = details["cardNumber"]
      card.artist = details["artist"]
      card.name = row['cardname']
      card.description = row['cardtext']
@@ -89,13 +93,13 @@ startdb.execute( "select * from card" ) do |row|
        cardset = "Commander"
      end
    
-     card.card_set_name = cardset
+     card.cardSetName = cardset
    
      types = row['cardtype'].split('-')
      card.type = types.count > 1 ? types[0].strip : types[0].strip
-     card.subtype = types.count > 1 ? types[1].strip : nil
+     card.subType = types.count > 1 ? types[1].strip : nil
      #row['cardtype'] #parse out subtype and loyalty points
-     card.manacost = row['manacost']
+     card.manaCost = row['manacost']
      card.power = row['power']  
      card.toughness = row['toughness']
    
@@ -107,7 +111,7 @@ startdb.execute( "select * from card" ) do |row|
        card.loyalty = 0
      end
    
-     card.convertedmanacost = row['convertedmanacost']
+     card.convertedManaCost = row['convertedmanacost']
    
      colors = []
      if row['isblue'] == 1
@@ -143,9 +147,9 @@ startdb.execute( "select * from card" ) do |row|
    
      id = card.save
      print "Saved: " + card.name + "\n"
-  else
-        print "Exists: " + row['cardname'] + "\n"   
-  end
+  #else
+        #print "Exists: " + row['cardname'] + "\n"   
+  #end
 end
 
 #load sets
