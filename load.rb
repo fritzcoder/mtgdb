@@ -75,8 +75,6 @@ startdb.execute( "select * from card" ) do |row|
    # if exists
    #      Card.delete(row['mvid'])
    #    end
-     
-   
    if exists == nil
      card = Card.new
      card._id = row['mvid']
@@ -84,6 +82,7 @@ startdb.execute( "select * from card" ) do |row|
      card.setNumber = details["cardNumber"]
      card.artist = details["artist"]
      card.name = row['cardname']
+     card.searchName = card.name.gsub(' ','').downcase
      card.description = row['cardtext']
      card.flavor = details["flavor"]
      cardset = row['cardset']

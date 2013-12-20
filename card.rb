@@ -13,6 +13,7 @@ class Card
   key :cardSetId, String
   key :setNumber, Integer
   key :name, String
+  key :searchName, String
   key :description, String
   key :flavor, String
   key :colors, Array
