@@ -10,6 +10,7 @@ include Mongo
 class Card
   include MongoMapper::Document
   key :_id, Integer
+  key :cardSetId, String
   key :setNumber, Integer
   key :name, String
   key :description, String
@@ -27,5 +28,5 @@ class Card
   key :artist, String
   key :releasedAt, Time
   #key :card_set_id, String
-  belongs_to :card_set, :foreign_key => "cardSetId"
+  #belongs_to :card_set, :foreign_key => "cardSetId"
 end

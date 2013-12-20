@@ -22,7 +22,7 @@ class CardSet
 	key :description, String
 	key :wikipedia, String
 	key :cardIds, Array
-  many :cards#, :in => :card_ids
+  #many :cards#, :in => :card_ids
   #uncommenting in allows for :car_ids to be populated, however mongomapper
   #will not reference the cardset in the Card objects
 end

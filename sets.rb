@@ -1849,13 +1849,13 @@ def load_sets()
     cards = Card.where(:cardSetName => s.name)
   
     cards.each do |c|
-      s.cards << c
       s.cardIds << c._id
       c.releasedAt = s.releasedAt
+      c.cardSetId = s._id
       c.save
     end
     
-    print "\tSaving:" + s.cards.count.to_s + "\n"
+    print "\tSaving:" + s.cardIds.count.to_s + "\n"
     s.save
   end
 end

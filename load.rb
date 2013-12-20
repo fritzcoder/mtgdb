@@ -72,12 +72,12 @@ startdb.results_as_hash = true
 startdb.execute( "select * from card" ) do |row|
   
    exists = Card.find(row['mvid'])
-   if exists
-     Card.delete(row['mvid'])
-   end
+   # if exists
+   #      Card.delete(row['mvid'])
+   #    end
      
    
-   #if exists == nil
+   if exists == nil
      card = Card.new
      card._id = row['mvid']
      details = get_card_details(card._id)
@@ -147,9 +147,9 @@ startdb.execute( "select * from card" ) do |row|
    
      id = card.save
      print "Saved: " + card.name + "\n"
-  #else
-        #print "Exists: " + row['cardname'] + "\n"   
-  #end
+  else
+        print "Exists: " + row['cardname'] + "\n"   
+  end
 end
 
 #load sets
