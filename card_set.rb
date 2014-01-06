@@ -12,6 +12,7 @@ class CardSet
 	key :_id, String
 	key :name, String
 	key :block, String
+	key :core, Boolean
 	key :releasedAt, Time
 	key :common, Integer
 	key :uncommon, Integer

@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>update.rb</string>
+	<string>sets.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>sets.rb</string>
 			<key>lastUsed</key>
-			<date>2013-12-20T12:28:55Z</date>
+			<date>2014-01-03T11:49:41Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>card_set.rb</string>
 			<key>lastUsed</key>
-			<date>2013-12-20T08:55:09Z</date>
+			<date>2014-01-03T08:33:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>card.rb</string>
 			<key>lastUsed</key>
-			<date>2013-12-20T15:39:25Z</date>
+			<date>2014-01-03T08:32:04Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -34,15 +36,19 @@
 			<key>filename</key>
 			<string>load.rb</string>
 			<key>lastUsed</key>
-			<date>2013-12-20T16:09:22Z</date>
+			<date>2014-01-03T08:28:42Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>update.rb</string>
+			<string>update_search_name.rb</string>
 			<key>lastUsed</key>
-			<date>2013-12-20T16:09:22Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2013-12-28T15:17:39Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>update_set_number.rb</string>
+			<key>lastUsed</key>
+			<date>2013-12-28T15:17:50Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -68,9 +74,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>15</integer>
+				<integer>13</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -82,9 +88,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>3</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -105,7 +111,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>125</integer>
+			<integer>45</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -126,23 +132,69 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>17</integer>
 				<key>line</key>
-				<integer>1857</integer>
+				<integer>303</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1506</integer>
+			<integer>283</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>32</integer>
+				<key>line</key>
+				<integer>303</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>303</integer>
+			</dict>
 		</dict>
-		<key>update.rb</key>
+		<key>update_search_name.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>27</integer>
+				<integer>30</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>30</integer>
+			</dict>
+		</dict>
+		<key>update_set_number.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>41</integer>
+				<key>line</key>
+				<integer>23</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -155,7 +207,8 @@
 		<string>card_set.rb</string>
 		<string>card.rb</string>
 		<string>load.rb</string>
-		<string>update.rb</string>
+		<string>update_search_name.rb</string>
+		<string>update_set_number.rb</string>
 		<string>README.md</string>
 		<string>sets.rb</string>
 	</array>
