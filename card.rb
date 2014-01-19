@@ -31,7 +31,7 @@ class Card
   key :releasedAt, Time
   
   many :rulings
-  many :formats
+  #many :formats
   #key :card_set_id, String
   #belongs_to :card_set, :foreign_key => "cardSetId"
 end
@@ -42,8 +42,7 @@ class Ruling
   key :rule, String
 end
 
-class Format
-  include MongoMapper::EmbeddedDocument
-  key :name, String
-  key :legal, Boolean
-end
+# class Format
+#   include MongoMapper::EmbeddedDocument
+#   key :name, Strings
+# end
