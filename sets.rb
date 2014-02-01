@@ -209,7 +209,7 @@ def load_sets()
   set12 = CardSet.new
   set12.name = "Archenemy"
   set12._id = "ARC"
-  set12.block = nil
+  set12.block = "Non-Block"
   set12.description = 'Archenemy is a variant of Magic: The Gathering with an emphasis on one vs. many multiplayer games. The set utilizes new oversized Scheme cards. Four game packs were released on June 18th, 2010: Assemble the Doomsday Machine, Bring About the Undead Apocalypse, Scorch the World with Dragonfire, Trample Civilization Underfoot. The cards within each preconstructed deck have all been reprinted from various Magic sets, with the exception of one card per deck, that is a new card from Magic 2011. All of the cards are black bordered and tournament legal in their original formats.'
   set12.wikipedia = "http://en.wikipedia.org/wiki/Archenemy_(Magic:_The_Gathering)"
   set12.common = 160
@@ -1211,7 +1211,7 @@ def load_sets()
 
   set74 = CardSet.new
   set74.name = "Homelands"
-  set74.block = nil
+  set74.block = "Non-Block"
   set74._id = "HML"
   set74.description = 'Homelands was the thirteenth Magic: The Gathering set and seventh expert level set, released in October 1995. It was considered to be part of the Ice Age block until the announcement of Coldsnap in October 2005.'
   set74.wikipedia = "http://en.wikipedia.org/wiki/Homelands_(Magic:_The_Gathering)"
@@ -1239,7 +1239,7 @@ def load_sets()
 
   set76 = CardSet.new
   set76.name = "Fallen Empires"
-  set76.block = nil
+  set76.block = "Non-Block"
   set76._id = "FEM"
   set16.description = 'Fallen Empires was the ninth Magic: The Gathering set and the fifth expansion set, released in November 1994. Out of the set of 187 cards, 102 were functionally unique, with the remainder being variant illustrations of other cards in the set. The mechanics of Fallen Empires include a tribal subtheme and heavy use of counters and tokens. Thematically the set experiments with conflict within the colors. The expansion symbol for the set is a crown.'
   set76.wikipedia = "http://en.wikipedia.org/wiki/Fallen_Empires"
@@ -1253,7 +1253,7 @@ def load_sets()
 
   set77 = CardSet.new
   set77.name = "The Dark"
-  set77.block = nil
+  set77.block = "Non-Block"
   set77._id = "DRK"
   set77.description = 'The Dark was the eighth Magic: The Gathering set and the fourth expansion to the game, released in August 1994. The set continued the story begun in Antiquities and recounted the aftermath of the events of that set. The 119-card set had a dark, sacrificial theme, though unlike its predecessor Legends it did not introduce any new keywords. Mechanically the set has no clear focus, experimenting in minor quantities with sacrifice and a tribal subtheme. The expansion symbol for the The Dark is an eclipsed moon.'
   set77.wikipedia = "http://en.wikipedia.org/wiki/The_Dark_(Magic:_The_Gathering)"
@@ -1267,7 +1267,7 @@ def load_sets()
 
   set78 = CardSet.new
   set78.name = "Legends"
-  set78.block = nil
+  set78.block = "Non-Block"
   set78._id = "LEG"
   set78.description = 'Legends was the seventh Magic: The Gathering set and the third expansion set, released in June 1994. It was the first expansion set to be sold in packs of 15 (previous expansions had been sold in packs of 8). The set was designed by Wizards of the Coast co-founder Steve Conard and friend Robin Herbert in Canada before the game was initially released.[5] Legends introduces several mechanics and keywords to the game, but the focus of the set lies clearly on the Legends themselves. These were the first multicolored cards in the game. They are also special in that they are all Legendary creatures, meaning that only one of each type can be in play. The expansion symbol for Legends is the capital of a column.'
   set78.wikipedia = "http://en.wikipedia.org/wiki/Legends_(Magic:_The_Gathering)"
@@ -1281,7 +1281,7 @@ def load_sets()
 
   set79 = CardSet.new
   set79.name = "Antiquities"
-  set79.block = nil 
+  set79.block = "Non-Block"
   set79._id = "ATQ"
   set79.description = "Antiquities was the fifth Magic: The Gathering set and the second expansion set. It was the first set to have an original backstory that explores the mythos of the Magic universe (see Magic: The Gathering storylines). The story is primarily about the brothers Urza and Mishra who are inseparable at first, but become sworn enemies over the finding of two power stones. Trying to get hold of the other's stone they eventually lay waste to the whole continent of Terisiare. The set was created by the group of students at the University of Pennsylvania that had helped Richard Garfield design the original game. Mechanically Antiquities revolves around artifacts. Only 35 of the 85 different cards are colored, the remaining 50 cards being artifacts and lands. The expansion symbol for Antiquities was an anvil."
   set79.wikipedia = "http://en.wikipedia.org/wiki/Antiquities_(Magic:_The_Gathering)"
@@ -1295,7 +1295,7 @@ def load_sets()
 
   set80 = CardSet.new
   set80.name = "Arabian Nights"
-  set80.block = nil
+  set80.block = "Non-Block"
   set80._id = "ARN"
   set80.description = 'Arabian Nights was the fourth Magic: The Gathering set 
   and the first expansion set. The set is composed entirely of new cards. The 
@@ -1318,7 +1318,7 @@ def load_sets()
   set81 = CardSet.new
   set81.name = "Chronicles"
   set81._id = "CHR"
-  set81.block = nil
+  set81.block = "Non-Block"
   set81.description = "Chronicles was the twelfth Magic: The Gathering set, and the first compilation set, released in July 1995 by Wizards of the Coast. The set is one of two sets that have been sold in twelve-card booster packs, the other having been Alliances."
   set81.wikipedia = "http://en.wikipedia.org/wiki/Chronicles_(Magic:_The_Gathering)"
   set81.common = 37
@@ -1332,7 +1332,7 @@ def load_sets()
   set82 = CardSet.new
   set82.name = "Anthologies"
   set82._id = "ATH"
-  set82.block = nil
+  set82.block = "Non-Block"
   set82.description = "Anthologies was a box set, the second compilation set, from the card game Magic: The Gathering. It was printed in November 1998 to celebrate the 5th anniversary of Magic. It featured cards from Alpha through Urza's Saga. The print run was unknown. When it was first printed, Anthologies sold for around $20.00 MSRP, but prices have risen since. As the cards have white borders and standard backs, they are tournament-legal.
   Unlike Chronicles, an expansion, but like other box sets, such as Battle Royale or Duel Decks: Jace vs. Chandra, the reprinted cards did not count as current product, and thus were only legal in formats which allowed the original cards being reprinted to be used, and were not automatically legal in Standard at the time the product was available"
   set82.wikipedia = "http://en.wikipedia.org/wiki/Anthologies_(Magic:_The_Gathering)"
@@ -1348,7 +1348,7 @@ def load_sets()
   set83 = CardSet.new
   set83.name = "Battle Royale Box Set"
   set83._id = "BRB"
-  set83.block = nil
+  set83.block = "Non-Block"
   set83.description = "Battle Royale was a Magic: The Gathering boxed set, the third compilation set, released in November 1999 as a collection of cards emphasizing the multiplayer aspect of the game. Most of the cards included are ones that can affect multiple opponents. This promotion included cards from all different sets that existed previous to it. The cards still retained their original expansion symbols although they were printed with white borders, which was the standard for reprinted Magic: The Gathering cards of 'core sets' until the 2007 release of Tenth Edition. These are the only sets that are printed with white borders (which started with Unlimited.) Another interesting aspect is that colored expansions symbols were added to the cards that didn’t have them previously (namely cards from Tempest, Portal: Second Age, Stronghold and Ice Age.)
   The set included 160 cards built into four different two-color theme decks which are 40 cards each: Spirit Gale (blue / white), Chargoyf (green / red), The Deluge (green / white), and Cinder Heart (black / red)."
   set83.wikipedia = "http://en.wikipedia.org/wiki/Battle_Royale_(Magic:_The_Gathering)"
@@ -1364,7 +1364,7 @@ def load_sets()
   set84 = CardSet.new
   set84.name = "Beatdown Box Set"
   set84._id = "BTD"
-  set84.block = nil
+  set84.block = "Non-Block"
   set84.description = "Beatdown is a box set for the card game Magic: The Gathering, and the fourth compilation set. It was created for special reprint purposes only and was not legal in Standard at the time of its release. Beatdown was released as a pair of preconstructed decks combined with accessories, unlike the normal distribution of Magic cards in randomized packs. At the time of release it sold for around $30.00 MSRP. Alternate art was done for four cards: Sengir Vampire, Erhnam Djinn, Ball Lightning, and Clockwork Beast. The set is white-bordered, and the expansion symbol is a mace. There are no White cards in the set."
   set84.wikipedia = "http://en.wikipedia.org/wiki/Beatdown_(Magic:_The_Gathering)"
   set84.common = 122
@@ -1379,7 +1379,7 @@ def load_sets()
   set85 = CardSet.new
   set85.name = "Deckmasters: Garfield vs. Finkel"
   set85._id = "DKM"
-  set85.block = nil
+  set85.block = "Non-Block"
   set85.description = "Deckmasters: Garfield vs. Finkel, usually known as simply Deckmasters, was a Magic: the Gathering set created in 2001 featuring copies of the decks used in a promotional match between Richard Garfield, the creator of the card game, and Jon Finkel, a Magic World Champion. Two decks were included in the set, a red/green deck used by Richard Garfield, and a red/black deck that was played by Finkel. It is the fifth compilation set."
   set85.wikipedia = "http://en.wikipedia.org/wiki/Deckmasters"
   set85.common = 124
@@ -1408,7 +1408,7 @@ def load_sets()
   set87 = CardSet.new
   set87.name = "Modern Masters"
   set87._id = "MMA"
-  set87.block = nil
+  set87.block = "Non-Block"
   set87.description = "Modern Masters is the second Magic: The Gathering compilation set, with the first compilation set being Chronicles. It was released on June 7th, 2013 by Wizards of the Coast. One booster box of Modern Masters contains only 24 booster packs, compared to a regular expansion containing 36 packs. The pricing of a booster pack from Modern Masters has a suggested retail price of $6.99 up from a regular suggested price of $3.99 for a regular expansion booster pack.[2] The set will be released in English only."
   set87.wikipedia = "http://en.wikipedia.org/wiki/Modern_Masters"
   set87.common = 101
@@ -1830,15 +1830,29 @@ def load_sets()
   set115.name = "Theros"
   set115._id = "THS"
   set115.block = "Theros"
-  set115.description = ""
-  set115.wikipedia = "249"
-  set115.common = 0
-  set115.uncommon = 0
-  set115.rare = 0
-  set115.mythicRare = 0
-  set115.basicLand = 0
+  set115.description = "The block is top-down-designed and is based on Greek mythology. It introduces the creature type God, the keywords Devotion, Monstrous, and Bestow, the ability word Heroic, and brings back the mechanic Scry. Its nonbasic lands include the rare Temples, which come into the battlefield tapped, give you one of two colors of mana (similar to Gates in the Return to Ravnica block) and let you Scry 1 when they come into play"
+  set115.wikipedia = "http://en.wikipedia.org/wiki/Theros"
+  set115.common = 101
+  set115.uncommon = 60
+  set115.rare = 53
+  set115.mythicRare = 15
+  set115.basicLand = 20
   set115.releasedAt = "September 27, 2013"
   id = set115.save
+  
+  set116 = CardSet.new
+  set116.name = "Born of the Gods"
+  set116._id = "BNG"
+  set116.block = "Theros"
+  set116.description = ""
+  set116.wikipedia = "http://en.wikipedia.org/wiki/Theros"
+  set116.common = 60
+  set116.uncommon = 60
+  set116.rare = 35
+  set116.mythicRare = 10
+  set116.basicLand = 0
+  set116.releasedAt = "February 7, 2014"
+  id = set116.save
   
   #now lets relate the cards and sets 
   sets = CardSet.all

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>update_cards.rb</string>
+	<string>update_search_name.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,7 +40,9 @@
 			<key>filename</key>
 			<string>update_search_name.rb</string>
 			<key>lastUsed</key>
-			<date>2014-01-07T07:46:09Z</date>
+			<date>2014-01-20T16:39:44Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -53,8 +55,6 @@
 			<string>update_cards.rb</string>
 			<key>lastUsed</key>
 			<date>2014-01-07T14:46:04Z</date>
-			<key>selected</key>
-			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -182,30 +182,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>5</integer>
 				<key>line</key>
-				<integer>30</integer>
+				<integer>28</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>30</integer>
-			</dict>
 		</dict>
 		<key>update_set_number.rb</key>
 		<dict>
@@ -227,7 +211,6 @@
 		<string>card_set.rb</string>
 		<string>card.rb</string>
 		<string>load.rb</string>
-		<string>update_cards.rb</string>
 		<string>update_search_name.rb</string>
 		<string>update_set_number.rb</string>
 		<string>README.md</string>

@@ -17,7 +17,6 @@ include Mongo
 MongoMapper.connection = Mongo::Connection.new("localhost", 27017)
 MongoMapper.database = "mtg"
 
-
 def get_card_formats(c)
   agent = Mechanize.new
   page = agent.get("http://gatherer.wizards.com/Pages/Card/Printings.aspx?multiverseid=" + 
@@ -37,11 +36,13 @@ def get_card_formats(c)
   puts "Saved formats: " + c.name
 end
 
-
 startdb = SQLite3::Database.new("cards.sqlite")
 startdb.results_as_hash = true
 startdb.execute( "select * from card" ) do |row|
   
    card = Card.find(row['mvid'])
-   get_card_formats(card)
+   
+   if card.formats.length == 0 
+     get_card_formats(card)
+   end
 end

@@ -23,9 +23,10 @@ startdb.execute( "select * from card" ) do |row|
   card = Card.find(row['mvid'])
   
   if card
-    card.searchName = card.name.gsub(' ','').downcase
+    card.searchName = card.name.gsub(' ','').downcase.gsub(/[^0-9a-z]/i, '')
     card.save
     puts "updated: " + card.name
   end
+  
 end
 
