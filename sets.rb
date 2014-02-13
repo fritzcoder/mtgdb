@@ -1104,7 +1104,7 @@ def load_sets()
   set67.rare = 110
   set67.mythicRare = 0
   set67.basicLand = 20
-  set67.releasedAt = "March 29, 2010" 
+  set67.releasedAt = "October 12, 1998" 
   id = set67.save
 
   set68 = CardSet.new
@@ -1118,7 +1118,7 @@ def load_sets()
   set68.rare = 44
   set68.mythicRare = 0
   set68.basicLand = 0
-  set68.releasedAt = "April 13, 2009" 
+  set68.releasedAt = "March 2, 1998" 
   id = set68.save
 
   set68b = CardSet.new
@@ -1147,7 +1147,7 @@ def load_sets()
   set69.rare = 110
   set69.mythicRare = 0
   set69.basicLand = 20
-  set69.releasedAt = "December 8, 2008" 
+  set69.releasedAt = "October 13, 1997" 
   id = set69.save
 
   set70 = CardSet.new
@@ -1162,7 +1162,7 @@ def load_sets()
   set70.rare = 50
   set70.mythicRare = 0
   set70.basicLand = 0
-  set70.releasedAt = "December 12, 2007" 
+  set70.releasedAt = "June 9, 1997" 
   id = set70.save
 
 
@@ -1177,7 +1177,7 @@ def load_sets()
   set71.rare = 50
   set71.mythicRare = 0
   set71.basicLand = 0
-  set71.releasedAt = "April 10, 2005" 
+  set71.releasedAt = "February 3, 1997" 
   id = set71.save
 
 
@@ -1192,7 +1192,7 @@ def load_sets()
   set72.rare = 110
   set72.mythicRare = 0
   set72.basicLand = 20
-  set72.releasedAt = "December 5, 2005" 
+  set72.releasedAt = "October 7, 1996" 
   id = set72.save
 
   set73 = CardSet.new
