@@ -27,10 +27,10 @@ class Card
   key :loyalty, Integer
   key :rarity, String
   key :artist, String
-  key :formats, Array
   key :releasedAt, Time
   
   many :rulings
+  many :formats
   #many :formats
   #key :card_set_id, String
   #belongs_to :card_set, :foreign_key => "cardSetId"
@@ -42,7 +42,9 @@ class Ruling
   key :rule, String
 end
 
-# class Format
-#   include MongoMapper::EmbeddedDocument
-#   key :name, Strings
-# end
+class Format
+  include MongoMapper::EmbeddedDocument
+  key :_id, Integer
+  key :name, String
+  key :legality, String
+end

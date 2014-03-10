@@ -27,9 +27,18 @@ def get_card_formats(c)
   c.formats.clear
   c.save!
   formats = []
+  i = 1
   table.search('tr').each do |tr|
       next if (tr['class'] == 'headerRow')
-      formats.push(tr.search("td").first.text.strip)
+      format = Format.new
+      format.name = tr.search("td").first.text.strip
+      format.legality = tr.search("td")[1].text.strip
+      format._id = i
+      
+      formats.push(format)
+      puts format.name
+      puts format.legality
+      i = i + i
   end
   c.formats = formats
   c.save!
@@ -42,7 +51,7 @@ startdb.execute( "select * from card" ) do |row|
   
    card = Card.find(row['mvid'])
    
-   if card.formats.length == 0 
+   #if card.formats.length == 0 
      get_card_formats(card)
-   end
+   #end
 end
