@@ -32,13 +32,18 @@ def get_card_formats(c)
       next if (tr['class'] == 'headerRow')
       format = Format.new
       format.name = tr.search("td").first.text.strip
-      format.legality = tr.search("td")[1].text.strip
+      if format.name == "This card is not playable in any formats."
+	       format.legality = ""
+      else
+        format.legality = tr.search("td")[1].text.strip
+      end
+
       format._id = i
       
       formats.push(format)
       puts format.name
       puts format.legality
-      i = i + i
+      i = i + 1
   end
   c.formats = formats
   c.save!
@@ -51,7 +56,10 @@ startdb.execute( "select * from card" ) do |row|
   
    card = Card.find(row['mvid'])
    
-   #if card.formats.length == 0 
+   if card.formats.length == 0
+     puts row['mvid'] 
      get_card_formats(card)
-   #end
+   else
+     puts "skip"
+   end
 end
