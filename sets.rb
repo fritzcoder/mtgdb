@@ -1423,7 +1423,7 @@ def load_sets()
   set88.name = "Duel Decks: Elves vs. Goblins"
   set88._id = "EVG"
   set88.block = "Duel Decks"
-  set88.description = ""
+  set88.description = "A stylized axe and bow combination symbol"
   set88.wikipedia = ""
   set88.common = 120
   set88.uncommon = 0
@@ -1437,7 +1437,7 @@ def load_sets()
   set89.name = "Duel Decks: Jace vs. Chandra"
   set89._id = "DD2"
   set89.block = "Duel Decks"
-  set89.description = ""
+  set89.description = "A point-reflected pair of swooshes"
   set89.wikipedia = ""
   set89.common = 120
   set89.uncommon = 0
@@ -1451,7 +1451,7 @@ def load_sets()
   set90.name = "Duel Decks: Divine vs. Demonic"
   set90._id = "DDC"
   set90.block = "Duel Decks"
-  set90.description = ""
+  set90.description = "A halo with horns coming up through its center"
   set90.wikipedia = ""
   set90.common = 120
   set90.uncommon = 0
@@ -1465,7 +1465,7 @@ def load_sets()
   set91.name = "Duel Decks: Garruk vs. Liliana"
   set91._id = "DDD"
   set91.block = "Duel Decks"
-  set91.description = ""
+  set91.description = "A leaf inside a semicircle"
   set91.wikipedia = ""
   set91.common = 120
   set91.uncommon = 0
@@ -1479,7 +1479,7 @@ def load_sets()
   set92.name = "Duel Decks: Phyrexia vs. the Coalition"
   set92._id = "DDE"
   set92.block = "Duel Decks"
-  set92.description = ""
+  set92.description = "Yawgmoth's and the Coalition's symbols combined"
   set92.wikipedia = ""
   set92.common = 120
   set92.uncommon = 0
@@ -1493,7 +1493,7 @@ def load_sets()
   set93.name = "Duel Decks: Elspeth vs. Tezzeret"
   set93._id = "DDF"
   set93.block = "Duel Decks"
-  set93.description = ""
+  set93.description = "Two trapezoids with parts missing"
   set93.wikipedia = ""
   set93.common = 120
   set93.uncommon = 0
@@ -1507,7 +1507,7 @@ def load_sets()
   set94.name = "Duel Decks: Knights vs. Dragons"
   set94._id = "DDG"
   set94.block = "Duel Decks"
-  set94.description = ""
+  set94.description = "A shield in the shape of a dragon in flight"
   set94.wikipedia = ""
   set94.common = 120
   set94.uncommon = 0
@@ -1521,7 +1521,7 @@ def load_sets()
   set95.name = "Duel Decks: Ajani vs. Nicol Bolas"
   set95._id = "DDH"
   set95.block = "Duel Decks"
-  set95.description = ""
+  set95.description = "Nicol Bolas' horns superimposed on Ajani's axe-head"
   set95.wikipedia = ""
   set95.common = 120
   set95.uncommon = 0
@@ -1535,7 +1535,7 @@ def load_sets()
   set96.name = "Duel Decks: Venser vs. Koth"
   set96._id = "DDI"
   set96.block = "Duel Decks"
-  set96.description = ""
+  set96.description = "Two nearly-interlocking zigzags"
   set96.wikipedia = ""
   set96.common = 120
   set96.uncommon = 0
@@ -1549,7 +1549,7 @@ def load_sets()
   set97.name = "Duel Decks: Izzet vs. Golgari"
   set97._id = "DDJ"
   set97.block = "Duel Decks"
-  set97.description = ""
+  set97.description = "Combination of Izzet and Golgari symbols"
   set97.wikipedia = ""
   set97.common = 120
   set97.uncommon = 0
@@ -1563,7 +1563,7 @@ def load_sets()
   set98.name = "Duel Decks: Sorin vs. Tibalt"
   set98._id = "DDK"
   set98.block = "Duel Decks"
-  set98.description = ""
+  set98.description = "Combination of stylized sword and jagged knife"
   set98.wikipedia = ""
   set98.common = 120
   set98.uncommon = 0
@@ -1577,7 +1577,7 @@ def load_sets()
   set98a.name = "Duel Decks: Heroes vs. Monsters"
   set98a._id = "DDL"
   set98a.block = "Duel Decks"
-  set98a.description = ""
+  set98a.description = "Combination axe, helmet, and wings"
   set98a.wikipedia = ""
   set98a.common = 120
   set98a.uncommon = 0
@@ -1586,6 +1586,20 @@ def load_sets()
   set98a.basicLand = 0
   set98a.releasedAt = "September 6, 2013"
   id = set98a.save
+  
+  set98b = CardSet.new
+  set98b.name = "Duel Decks: Jace vs. Vraska"
+  set98b._id = "DDM"
+  set98b.block = "Duel Decks"
+  set98b.description = "Arcane symbol and gorgon tentacle"
+  set98b.wikipedia = ""
+  set98b.common = 120
+  set98b.uncommon = 0
+  set98b.rare = 0
+  set98b.mythicRare = 0
+  set98b.basicLand = 0
+  set98b.releasedAt = "March 14, 2014"
+  id = set98b.save
 
 
   set99 = CardSet.new

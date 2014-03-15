@@ -1,4 +1,18 @@
 MTG Database load scripts
+use mtg
+Pre: db.card_sets_remove()
+
+1. load.rb
+
+2. update_search_name.rb
+
+3. update_card_format.rb
+
+4. update_cards_rulings.rb
+
+5. get_hires_image.rb
+
+
 Prerequisites:
 	The deckbuilder database: http://www.deckedbuilder.com/
 	You will need to purchase the mac version. You can find that database
