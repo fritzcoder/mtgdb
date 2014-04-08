@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>get_hisres_image.rb</string>
+	<string>card.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>sets.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T12:12:41Z</date>
+			<date>2014-04-08T11:33:34Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>card_set.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T11:21:17Z</date>
+			<date>2014-04-08T11:33:47Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>card.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T11:21:20Z</date>
+			<date>2014-04-08T11:38:54Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -34,7 +36,7 @@
 			<key>filename</key>
 			<string>load.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T11:26:07Z</date>
+			<date>2014-04-08T11:38:54Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -46,7 +48,7 @@
 			<key>filename</key>
 			<string>update_set_number.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T11:19:57Z</date>
+			<date>2014-04-08T11:34:59Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -64,9 +66,7 @@
 			<key>filename</key>
 			<string>get_hisres_image.rb</string>
 			<key>lastUsed</key>
-			<date>2014-03-15T13:13:36Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2014-04-08T11:32:10Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -108,14 +108,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>20</integer>
 				<key>line</key>
-				<integer>46</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>card_set.rb</key>
 		<dict>
@@ -166,30 +166,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>79</integer>
+				<integer>68</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>110</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>16</integer>
-				<key>line</key>
-				<integer>79</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>27</integer>
-				<key>line</key>
-				<integer>79</integer>
-			</dict>
+			<integer>65</integer>
 		</dict>
 		<key>sets.rb</key>
 		<dict>
@@ -203,7 +187,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>1054</integer>
 		</dict>
 		<key>update_card_format.rb</key>
 		<dict>
@@ -259,7 +243,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>10</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>

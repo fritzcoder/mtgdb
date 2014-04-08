@@ -82,6 +82,7 @@ startdb.execute( "select * from card" ) do |row|
      card.setNumber = details["cardNumber"]
      card.artist = details["artist"]
      card.name = row['cardname']
+     card.token = false
      card.searchName = card.name.gsub(' ','').downcase
      card.description = row['cardtext']
      card.flavor = details["flavor"]

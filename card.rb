@@ -27,6 +27,7 @@ class Card
   key :loyalty, Integer
   key :rarity, String
   key :artist, String
+  key :token, Boolean
   key :releasedAt, Time
   
   many :rulings
