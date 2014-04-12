@@ -13,7 +13,7 @@ class CardSet
 	key :name, String
 	key :block, String
 	key :core, Boolean
-	key :releasedAt, Time
+	key :releasedAt, String
 	key :common, Integer
 	key :uncommon, Integer
 	key :rare, Integer

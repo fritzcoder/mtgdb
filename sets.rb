@@ -4,8 +4,8 @@ gem 'activerecord'
 require 'active_record'
 require 'mongo_mapper'
 require 'open-uri'
-#load 'card.rb'
-#load 'card_set.rb'
+load 'card.rb'
+load 'card_set.rb'
 
 include Mongo
 
@@ -24,7 +24,7 @@ def load_sets()
   set1.rare = 35
   set1.mythicRare = 11
   set1.basicLand = 0
-  set1.releasedAt = "May 3, 2013" 
+  set1.releasedAt = "2013-05-03" 
   id = set1.save
 
 
@@ -39,7 +39,7 @@ def load_sets()
   set2.rare = 53
   set2.mythicRare = 15
   set2.basicLand = 0
-  set2.releasedAt = "February 1, 2013" 
+  set2.releasedAt = "2013-02-01" 
   id = set2.save
 
   set3 = CardSet.new
@@ -53,7 +53,7 @@ def load_sets()
   set3.rare = 53
   set3.mythicRare = 15
   set3.basicLand = 25
-  set3.releasedAt = "October 5, 2012" 
+  set3.releasedAt = "2012-10-05" 
   id = set3.save
 
   set4 = CardSet.new
@@ -71,7 +71,7 @@ def load_sets()
   set4.rare = 0
   set4.mythicRare = 0
   set4.basicLand = 0
-  set4.releasedAt = "June 1, 2012" 
+  set4.releasedAt = "2012-06-01" 
   id = set4.save
 
   set5 = CardSet.new
@@ -86,7 +86,7 @@ def load_sets()
   set5.rare = 53
   set5.mythicRare = 15
   set5.basicLand = 15
-  set5.releasedAt = "May 4, 2012" 
+  set5.releasedAt = "2012-05-04" 
   id = set5.save
 
   set6 = CardSet.new
@@ -100,7 +100,7 @@ def load_sets()
   set6.rare = 38
   set6.mythicRare = 12
   set6.basicLand = 0
-  set6.releasedAt = "February 3, 2012" 
+  set6.releasedAt = "2012-03-03" 
   id = set6.save
 
   set7 = CardSet.new
@@ -114,7 +114,7 @@ def load_sets()
   set7.rare = 59
   set7.mythicRare = 16
   set7.basicLand = 15
-  set7.releasedAt = "September 30, 2011" 
+  set7.releasedAt = "2011-09-30" 
   id = set7.save
 
   set8 = CardSet.new
@@ -131,7 +131,7 @@ def load_sets()
   set8.rare = 0
   set8.mythicRare = 0
   set8.basicLand = 0
-  set8.releasedAt = "June 17, 2011" 
+  set8.releasedAt = "2011-06-17" 
   id = set8.save
 
   set8b = CardSet.new
@@ -145,7 +145,7 @@ def load_sets()
   set8b.rare = 0
   set8b.mythicRare = 0
   set8b.basicLand = 0
-  set8b.releasedAt = "November 2, 2012" 
+  set8b.releasedAt = "2012-11-02" 
   id = set8b.save
 
   set8c = CardSet.new
@@ -159,7 +159,7 @@ def load_sets()
   set8c.rare = 0
   set8c.mythicRare = 0
   set8c.basicLand = 0
-  set8c.releasedAt = "November 1, 2013" 
+  set8c.releasedAt = "2013-11-01" 
   id = set8c.save
 
   set9 = CardSet.new
@@ -174,7 +174,7 @@ def load_sets()
   set9.rare = 35
   set9.mythicRare = 10
   set9.basicLand = 10
-  set9.releasedAt = "May 13, 2011" 
+  set9.releasedAt = "2011-05-13" 
   id = set9.save
 
   set10 = CardSet.new
@@ -188,7 +188,7 @@ def load_sets()
   set10.rare = 35
   set10.mythicRare = 10
   set10.basicLand = 10
-  set10.releasedAt = "February 4, 2011" 
+  set10.releasedAt = "2011-02-04" 
   id = set10.save
 
   set11 = CardSet.new
@@ -203,7 +203,7 @@ def load_sets()
   set11.rare = 53
   set11.mythicRare = 15
   set11.basicLand = 20
-  set11.releasedAt = "October 1, 2010" 
+  set11.releasedAt = "2010-10-01" 
   id = set11.save
 
   set12 = CardSet.new
@@ -217,7 +217,7 @@ def load_sets()
   set12.rare = 0
   set12.mythicRare = 0
   set12.basicLand = 0
-  set12.releasedAt = "June 18, 2010" 
+  set12.releasedAt = "2010-06-18" 
   id = set12.save
 
   set13 = CardSet.new
@@ -231,7 +231,7 @@ def load_sets()
   set13.rare = 53
   set13.mythicRare = 15
   set13.basicLand = 20
-  set13.releasedAt = "April 23, 2010" 
+  set13.releasedAt = "2010-04-23" 
   id = set13.save
 
 
@@ -248,7 +248,7 @@ def load_sets()
   set14.rare = 35
   set14.mythicRare = 10
   set14.basicLand = 0
-  set14.releasedAt = "February 5, 2010" 
+  set14.releasedAt = "2010-02-05" 
   id = set14.save
 
   set15 = CardSet.new
@@ -268,7 +268,7 @@ def load_sets()
   set15.rare = 53
   set15.mythicRare = 15
   set15.basicLand = 20
-  set15.releasedAt = "October 2, 2009" 
+  set15.releasedAt = "2009-10-02" 
   id = set15.save
 
   set16 = CardSet.new
@@ -282,7 +282,7 @@ def load_sets()
   set16.rare = 0
   set16.mythicRare = 0
   set16.basicLand = 0
-  set16.releasedAt = "September 4, 2009" 
+  set16.releasedAt = "2009-11-04" 
   id = set16.save
 
   set17 = CardSet.new
@@ -296,7 +296,7 @@ def load_sets()
   set17.rare = 70
   set17.mythicRare = 0
   set17.basicLand = 15
-  set17.releasedAt = "September 9, 2009" 
+  set17.releasedAt = "2009-09-09" 
   id = set17.save
 
   set18 = CardSet.new
@@ -310,7 +310,7 @@ def load_sets()
   set18.rare = 35
   set18.mythicRare = 10
   set18.basicLand = 0
-  set18.releasedAt = "April 30, 2009" 
+  set18.releasedAt = "2009-04-30" 
   id = set18.save
 
   set19 = CardSet.new
@@ -324,7 +324,7 @@ def load_sets()
   set19.rare = 35
   set19.mythicRare = 10
   set19.basicLand = 0
-  set19.releasedAt = "February 6, 2009" 
+  set19.releasedAt = "2009-02-06" 
   id = set19.save
 
   set20 = CardSet.new
@@ -338,7 +338,7 @@ def load_sets()
   set20.rare = 53
   set20.mythicRare = 15
   set20.basicLand = 20
-  set20.releasedAt = "October 3, 2008" 
+  set20.releasedAt = "2008-10-03" 
   id = set20.save
 
   set21 = CardSet.new
@@ -357,7 +357,7 @@ def load_sets()
   set21.rare = 80
   set21.mythicRare = 0
   set21.basicLand = 5
-  set21.releasedAt = "September 26, 2008" 
+  set21.releasedAt = "2008-09-26" 
   id = set21.save
 
   set22 = CardSet.new
@@ -371,7 +371,7 @@ def load_sets()
   set22.rare = 60
   set22.mythicRare = 0
   set22.basicLand = 0
-  set22.releasedAt = "July 25, 2008" 
+  set22.releasedAt = "2008-06-25" 
   id = set22.save
 
   set23 = CardSet.new
@@ -385,7 +385,7 @@ def load_sets()
   set23.rare = 80
   set23.mythicRare = 0
   set23.basicLand = 20
-  set23.releasedAt = "May 2, 2008" 
+  set23.releasedAt = "2008-05-02" 
   id = set23.save
 
   set24 = CardSet.new
@@ -399,7 +399,7 @@ def load_sets()
   set24.rare = 50
   set24.mythicRare = 0
   set24.basicLand = 0
-  set24.releasedAt = "February 1, 2008" 
+  set24.releasedAt = "2008-02-01" 
   id = set24.save
 
   set25 = CardSet.new
@@ -413,7 +413,7 @@ def load_sets()
   set25.rare = 80
   set25.mythicRare = 0
   set25.basicLand = 20
-  set25.releasedAt = "October 12, 2007" 
+  set25.releasedAt = "2007-10-12" 
   id = set25.save
 
   set26 = CardSet.new
@@ -427,7 +427,7 @@ def load_sets()
   set26.rare = 60
   set26.mythicRare = 0
   set26.basicLand = 20
-  set26.releasedAt = "September 10, 2007" 
+  set26.releasedAt = "2007-09-10" 
   id = set26.save
 
   set27 = CardSet.new
@@ -440,7 +440,7 @@ def load_sets()
   set27.rare = 60
   set27.mythicRare = 0
   set27.basicLand = 0
-  set27.releasedAt = "May 4, 2007" 
+  set27.releasedAt = "2007-05-04" 
   id = set27.save
 
   set28 = CardSet.new
@@ -454,7 +454,7 @@ def load_sets()
   set28.rare = 50
   set28.mythicRare = 0
   set28.basicLand = 0
-  set28.releasedAt = "February 2, 2007" 
+  set28.releasedAt = "2007-02-02" 
   id = set28.save
 
   set29 = CardSet.new
@@ -471,7 +471,7 @@ def load_sets()
   set29.rare = 80
   set29.mythicRare = 0
   set29.basicLand = 20
-  set29.releasedAt = "October 6, 2006" 
+  set29.releasedAt = "2006-11-06" 
   id = set29.save
 
   set29b = CardSet.new
@@ -485,7 +485,7 @@ def load_sets()
   set29b.rare = 0
   set29b.mythicRare = 0
   set29b.basicLand = 0
-  set29b.releasedAt = "October 6, 2006" 
+  set29b.releasedAt = "2006-10-06" 
   id = set29b.save
 
   set30 = CardSet.new
@@ -499,7 +499,7 @@ def load_sets()
   set30.rare = 40
   set30.mythicRare = 0
   set30.basicLand = 0
-  set30.releasedAt = "July 21, 2006" 
+  set30.releasedAt = "2006-06-21" 
   id = set30.save
 
   set31 = CardSet.new
@@ -513,7 +513,7 @@ def load_sets()
   set31.rare = 60
   set31.mythicRare = 0
   set31.basicLand = 0
-  set31.releasedAt = "May 5, 2006" 
+  set31.releasedAt = "2006-05-05" 
   id = set31.save
 
   set32 = CardSet.new
@@ -527,7 +527,7 @@ def load_sets()
   set32.rare = 55
   set32.mythicRare = 0
   set32.basicLand = 0
-  set32.releasedAt = "February 3, 2006" 
+  set32.releasedAt = "2006-02-03" 
   id = set32.save
 
   set33 = CardSet.new
@@ -542,7 +542,7 @@ def load_sets()
   set33.rare = 88
   set33.mythicRare = 0
   set33.basicLand = 20
-  set33.releasedAt = "October 7, 2005" 
+  set33.releasedAt = "2005-10-07" 
   id = set33.save
 
   set34 = CardSet.new
@@ -556,7 +556,7 @@ def load_sets()
   set34.rare = 55
   set34.mythicRare = 0
   set34.basicLand = 0
-  set34.releasedAt = "June 3, 2005" 
+  set34.releasedAt = "2005-06-03" 
   id = set34.save
 
   set35 = CardSet.new
@@ -575,7 +575,7 @@ def load_sets()
   set35.rare = 55
   set35.mythicRare = 0
   set35.basicLand = 0
-  set35.releasedAt = "February 4, 2005" 
+  set35.releasedAt = "2005-02-04" 
   id = set35.save
 
   set36 = CardSet.new
@@ -596,7 +596,7 @@ def load_sets()
   set36.rare = 88
   set36.mythicRare = 0
   set36.basicLand = 20
-  set36.releasedAt = "October 1, 2004" 
+  set36.releasedAt = "2004-10-01" 
   id = set36.save
 
   set37 = CardSet.new
@@ -612,7 +612,7 @@ def load_sets()
   set37.rare = 55
   set37.mythicRare = 0
   set37.basicLand = 0
-  set37.releasedAt = "June 4, 2004" 
+  set37.releasedAt = "2004-06-04" 
   id = set37.save
 
   set38 = CardSet.new
@@ -627,7 +627,7 @@ def load_sets()
   set38.rare = 55
   set38.mythicRare = 0
   set38.basicLand = 0
-  set38.releasedAt = "February 6, 2004" 
+  set38.releasedAt = "2004-02-06" 
   id = set38.save
 
   set39 = CardSet.new
@@ -641,7 +641,7 @@ def load_sets()
   set39.rare = 88
   set39.mythicRare = 0
   set39.basicLand = 20
-  set39.releasedAt = "October 3, 2003" 
+  set39.releasedAt = "2003-10-03" 
   id = set39.save
 
   set40 = CardSet.new
@@ -655,7 +655,7 @@ def load_sets()
   set40.rare = 45
   set40.mythicRare = 0
   set40.basicLand = 0
-  set40.releasedAt = "February 3, 2003"
+  set40.releasedAt = "2003-02-03"
   id = set40.save
 
   set40b = CardSet.new
@@ -669,7 +669,7 @@ def load_sets()
   set40b.rare = 44
   set40b.mythicRare = 0
   set40b.basicLand = 0
-  set40b.releasedAt = "May 26, 2003"
+  set40b.releasedAt = "2003-05-26"
   id = set40b.save
 
   set41 = CardSet.new
@@ -683,7 +683,7 @@ def load_sets()
   set41.rare = 110
   set41.mythicRare = 0
   set41.basicLand = 20
-  set41.releasedAt = "October 7, 2002" 
+  set41.releasedAt = "2002-10-07" 
   id = set41.save
 
   set42 = CardSet.new
@@ -699,7 +699,7 @@ def load_sets()
   set42.rare = 44
   set42.mythicRare = 0
   set42.basicLand = 0
-  set42.releasedAt = "May 27, 2002" 
+  set42.releasedAt = "2002-05-27" 
   id = set42.save
 
   set43 = CardSet.new
@@ -713,7 +713,7 @@ def load_sets()
   set43.rare = 44
   set43.mythicRare = 0
   set43.basicLand = 0
-  set43.releasedAt = "February 4, 2002"
+  set43.releasedAt = "2002-02-04"
   id = set43.save
 
   set44 = CardSet.new
@@ -727,7 +727,7 @@ def load_sets()
   set44.rare = 110
   set44.mythicRare = 0
   set44.basicLand = 20
-  set44.releasedAt = "October 1, 2001"
+  set44.releasedAt = "2001-10-01"
   id = set44.save
 
   set45 = CardSet.new
@@ -741,7 +741,7 @@ def load_sets()
   set45.rare = 44
   set45.mythicRare = 0
   set45.basicLand = 0
-  set45.releasedAt = "June 4, 2001"
+  set45.releasedAt = "2001-06-04"
   id = set45.save
 
   set46 = CardSet.new
@@ -755,7 +755,7 @@ def load_sets()
   set46.rare = 44
   set46.mythicRare = 0
   set46.basicLand = 0
-  set46.releasedAt = "February 5, 2001"
+  set46.releasedAt = "2001-02-05"
   id = set46.save
 
   set47 = CardSet.new
@@ -769,7 +769,7 @@ def load_sets()
   set47.rare = 110
   set47.mythicRare = 0
   set47.basicLand = 20
-  set47.releasedAt = "October 2, 2000"
+  set47.releasedAt = "2000-10-02"
   id = set47.save
 
   set48 = CardSet.new
@@ -784,7 +784,7 @@ def load_sets()
   set48.rare = 53
   set48.mythicRare = 15
   set48.basicLand = 20
-  set48.releasedAt = "July 19, 2013" 
+  set48.releasedAt = "2013-06-19" 
   id = set48.save
 
   set49 = CardSet.new
@@ -799,7 +799,7 @@ def load_sets()
   set49.rare = 53
   set49.mythicRare = 15
   set49.basicLand = 20
-  set49.releasedAt = "July 13, 2012" 
+  set49.releasedAt = "2012-07-13" 
   id = set49.save
 
   set50 = CardSet.new
@@ -813,7 +813,7 @@ def load_sets()
   set50.rare = 53
   set50.mythicRare = 15
   set50.basicLand = 20
-  set50.releasedAt = "July 15, 2011" 
+  set50.releasedAt = "2011-07-15" 
   id = set50.save
 
   set51 = CardSet.new
@@ -827,7 +827,7 @@ def load_sets()
   set51.rare = 53
   set51.mythicRare = 15
   set51.basicLand = 20
-  set51.releasedAt = "July 16, 2010" 
+  set51.releasedAt = "2010-07-16" 
   id = set51.save
 
   set52 = CardSet.new
@@ -841,7 +841,7 @@ def load_sets()
   set52.rare = 53
   set52.mythicRare = 15
   set52.basicLand = 20
-  set52.releasedAt = "July 17, 2009" 
+  set52.releasedAt = "2009-07-17" 
   id = set52.save
 
   set53 = CardSet.new
@@ -856,7 +856,7 @@ def load_sets()
   set53.rare = 121
   set53.mythicRare = 0
   set53.basicLand = 20
-  set53.releasedAt = "July 13, 2007" 
+  set53.releasedAt = "2007-07-13" 
   id = set53.save
 
   set54 = CardSet.new
@@ -870,7 +870,7 @@ def load_sets()
   set54.rare = 110
   set54.mythicRare = 0
   set54.basicLand = 20
-  set54.releasedAt = "July 29, 2005" 
+  set54.releasedAt = "2005-07-29" 
   id = set54.save
 
   set55 = CardSet.new
@@ -884,7 +884,7 @@ def load_sets()
   set55.rare = 110
   set55.mythicRare = 0
   set55.basicLand = 20
-  set55.releasedAt = "July 28, 2003" 
+  set55.releasedAt = "2003-07-28" 
   id = set55.save
 
   set56 = CardSet.new
@@ -898,7 +898,7 @@ def load_sets()
   set56.rare = 110
   set56.mythicRare = 0
   set56.basicLand = 20
-  set56.releasedAt = "April 11, 2001"
+  set56.releasedAt = "2001-04-11"
   id = set56.save
 
   set57 = CardSet.new
@@ -912,7 +912,7 @@ def load_sets()
   set57.rare = 110
   set57.mythicRare = 0
   set57.basicLand = 20
-  set57.releasedAt = "April 28, 1999"
+  set57.releasedAt = "1999-04-28"
   id = set57.save
 
   set58 = CardSet.new
@@ -926,7 +926,7 @@ def load_sets()
   set58.rare = 132
   set58.mythicRare = 0
   set58.basicLand = 20
-  set58.releasedAt = "March 24, 1997"
+  set58.releasedAt = "1997-03-24"
   id = set58.save
 
   set59 = CardSet.new
@@ -941,7 +941,7 @@ def load_sets()
   set59.rare = 121
   set59.mythicRare = 0
   set59.basicLand = 15
-  set59.releasedAt = "April 1, 1995"
+  set59.releasedAt = "1995-04-01"
   id = set59.save
 
   set60 = CardSet.new
@@ -955,7 +955,7 @@ def load_sets()
   set60.rare = 121
   set60.mythicRare = 0
   set60.basicLand = 15
-  set60.releasedAt = "April 1, 1994"
+  set60.releasedAt = "1994-04-01"
   id = set60.save
 
   set61a = CardSet.new
@@ -972,7 +972,7 @@ def load_sets()
   set61a.rare = 116
   set61a.mythicRare = 0
   set61a.basicLand = 10
-  set61a.releasedAt = "August 5, 1993" 
+  set61a.releasedAt = "1993-08-05" 
   id = set61a.save
 
   set61b = CardSet.new
@@ -999,7 +999,7 @@ def load_sets()
   set61b.rare = 117
   set61b.mythicRare = 0
   set61b.basicLand = 10
-  set61b.releasedAt = "October 1, 1993"
+  set61b.releasedAt = "1993-10-01"
   id = set61b.save
 
   set61u = CardSet.new
@@ -1018,7 +1018,7 @@ def load_sets()
   set61u.rare = 117
   set61u.mythicRare = 0
   set61u.basicLand = 15
-  set61u.releasedAt = "December 1, 1993"
+  set61u.releasedAt = "1993-12-01"
   id = set61u.save
 
 
@@ -1034,7 +1034,7 @@ def load_sets()
   set62.rare = 44
   set62.mythicRare = 0
   set62.basicLand = 0
-  set62.releasedAt = "June 5, 2000" 
+  set62.releasedAt = "2000-06-05" 
   id = set62.save
 
   set63 = CardSet.new
@@ -1048,7 +1048,7 @@ def load_sets()
   set63.rare = 44
   set63.mythicRare = 0
   set63.basicLand = 0
-  set63.releasedAt = "February 14, 2000"
+  set63.releasedAt = "2000-02-14"
   id = set63.save
 
   set64 = CardSet.new
@@ -1062,7 +1062,7 @@ def load_sets()
   set64.rare = 110
   set64.mythicRare = 0
   set64.basicLand = 20
-  set64.releasedAt = "October 4, 1999" 
+  set64.releasedAt = "1999-10-04" 
   id = set64.save
 
   set65 = CardSet.new
@@ -1076,7 +1076,7 @@ def load_sets()
   set65.rare = 44
   set65.mythicRare = 0
   set65.basicLand = 0
-  set65.releasedAt = "May 29, 1999"  
+  set65.releasedAt = "1999-05-29"  
   id = set65.save
 
   set66 = CardSet.new
@@ -1090,7 +1090,7 @@ def load_sets()
   set66.rare = 44
   set66.mythicRare = 0
   set66.basicLand = 0
-  set66.releasedAt = "February 15, 1999"
+  set66.releasedAt = "1999-02-15"
   id = set66.save
 
   set67 = CardSet.new
@@ -1104,7 +1104,7 @@ def load_sets()
   set67.rare = 110
   set67.mythicRare = 0
   set67.basicLand = 20
-  set67.releasedAt = "October 12, 1998" 
+  set67.releasedAt = "1998-10-12" 
   id = set67.save
 
   set68 = CardSet.new
@@ -1118,7 +1118,7 @@ def load_sets()
   set68.rare = 44
   set68.mythicRare = 0
   set68.basicLand = 0
-  set68.releasedAt = "March 2, 1998" 
+  set68.releasedAt = "1998-03-02" 
   id = set68.save
 
   set68b = CardSet.new
@@ -1132,7 +1132,7 @@ def load_sets()
   set68b.rare = 44
   set68b.mythicRare = 0
   set68b.basicLand = 0
-  set68b.releasedAt = "June 15, 1998" 
+  set68b.releasedAt = "1998-06-15" 
   id = set68b.save
 
 
@@ -1147,7 +1147,7 @@ def load_sets()
   set69.rare = 110
   set69.mythicRare = 0
   set69.basicLand = 20
-  set69.releasedAt = "October 13, 1997" 
+  set69.releasedAt = "1997-10-13" 
   id = set69.save
 
   set70 = CardSet.new
@@ -1162,7 +1162,7 @@ def load_sets()
   set70.rare = 50
   set70.mythicRare = 0
   set70.basicLand = 0
-  set70.releasedAt = "June 9, 1997" 
+  set70.releasedAt = "1997-06-09" 
   id = set70.save
 
 
@@ -1177,7 +1177,7 @@ def load_sets()
   set71.rare = 50
   set71.mythicRare = 0
   set71.basicLand = 0
-  set71.releasedAt = "February 3, 1997" 
+  set71.releasedAt = "1997-02-03" 
   id = set71.save
 
 
@@ -1192,7 +1192,7 @@ def load_sets()
   set72.rare = 110
   set72.mythicRare = 0
   set72.basicLand = 20
-  set72.releasedAt = "October 7, 1996" 
+  set72.releasedAt = "1996-10-07" 
   id = set72.save
 
   set73 = CardSet.new
@@ -1206,7 +1206,7 @@ def load_sets()
   set73.rare = 46
   set73.mythicRare = 0
   set73.basicLand = 0
-  set73.releasedAt = "May 18, 1996" 
+  set73.releasedAt = "1996-05-18" 
   id = set73.save
 
   set74 = CardSet.new
@@ -1220,7 +1220,7 @@ def load_sets()
   set74.rare = 42
   set74.mythicRare = 0
   set74.basicLand = 0
-  set74.releasedAt = "October 1, 1995"
+  set74.releasedAt = "1995-10-01"
   id = set74.save
 
   set75 = CardSet.new
@@ -1234,7 +1234,7 @@ def load_sets()
   set75.rare = 121
   set75.mythicRare = 0
   set75.basicLand = 20
-  set75.releasedAt = "June 1, 1995"
+  set75.releasedAt = "1995-06-01"
   id = set75.save
 
   set76 = CardSet.new
@@ -1248,7 +1248,7 @@ def load_sets()
   set76.rare = 36
   set76.mythicRare = 0
   set76.basicLand = 0
-  set76.releasedAt = "November 1, 1994"
+  set76.releasedAt = "1994-11-01"
   id = set76.save
 
   set77 = CardSet.new
@@ -1262,7 +1262,7 @@ def load_sets()
   set77.rare = 35
   set77.mythicRare = 0
   set77.basicLand = 0
-  set77.releasedAt = "August 1, 1994"
+  set77.releasedAt = "1994-07-01"
   id = set77.save
 
   set78 = CardSet.new
@@ -1276,7 +1276,7 @@ def load_sets()
   set78.rare = 121
   set78.mythicRare = 0
   set78.basicLand = 0
-  set78.releasedAt = "June 1, 1994"
+  set78.releasedAt = "1994-06-01"
   id = set78.save
 
   set79 = CardSet.new
@@ -1290,7 +1290,7 @@ def load_sets()
   set79.rare = 26
   set79.mythicRare = 0
   set79.basicLand = 0
-  set79.releasedAt = "March 1, 1994"
+  set79.releasedAt = "1994-03-01"
   id = set79.save
 
   set80 = CardSet.new
@@ -1311,7 +1311,7 @@ def load_sets()
   set80.rare = 32
   set80.mythicRare = 0
   set80.basicLand = 1
-  set80.releasedAt = "December 1, 1993"
+  set80.releasedAt = "1993-12-01"
   id = set80.save
 
 
@@ -1326,7 +1326,7 @@ def load_sets()
   set81.rare = 45
   set81.mythicRare = 0
   set81.basicLand = 0
-  set81.releasedAt = "July 1, 1995"
+  set81.releasedAt = "1995-07-01"
   id = set81.save
 
   set82 = CardSet.new
@@ -1341,7 +1341,7 @@ def load_sets()
   set82.rare = 0
   set82.mythicRare = 0
   set82.basicLand = 0
-  set82.releasedAt = "November 1, 1998"
+  set82.releasedAt = "1998-11-01"
   id = set82.save
 
 
@@ -1357,7 +1357,7 @@ def load_sets()
   set83.rare = 0
   set83.mythicRare = 0
   set83.basicLand = 0
-  set83.releasedAt = "November 12, 1999"
+  set83.releasedAt = "1999-11-12"
   id = set83.save
 
 
@@ -1372,7 +1372,7 @@ def load_sets()
   set84.rare = 0
   set84.mythicRare = 0
   set84.basicLand = 0
-  set84.releasedAt = "December 1, 2000"
+  set84.releasedAt = "2000-12-01"
   id = set84.save
 
 
@@ -1387,7 +1387,7 @@ def load_sets()
   set85.rare = 0
   set85.mythicRare = 0
   set85.basicLand = 0
-  set85.releasedAt = "December 1, 2001"
+  set85.releasedAt = "2001-12-01"
   id = set85.save
 
   set86 = CardSet.new
@@ -1401,7 +1401,7 @@ def load_sets()
   set86.rare = 0
   set86.mythicRare = 0
   set86.basicLand = 0
-  set86.releasedAt = "June 4, 2010"
+  set86.releasedAt = "2010-06-04"
   id = set86.save
 
 
@@ -1416,7 +1416,7 @@ def load_sets()
   set87.rare = 53
   set87.mythicRare = 15
   set87.basicLand = 0
-  set87.releasedAt = "June 7, 2013"
+  set87.releasedAt = "2013-07-07"
   id = set87.save
 
   set88 = CardSet.new
@@ -1430,7 +1430,7 @@ def load_sets()
   set88.rare = 0
   set88.mythicRare = 0
   set88.basicLand = 0
-  set88.releasedAt = "November 16, 2007"
+  set88.releasedAt = "2007-11-16"
   id = set88.save
 
   set89 = CardSet.new
@@ -1444,7 +1444,7 @@ def load_sets()
   set89.rare = 0
   set89.mythicRare = 0
   set89.basicLand = 0
-  set89.releasedAt = "November 7, 2008"
+  set89.releasedAt = "2008-11-07"
   id = set89.save
 
   set90 = CardSet.new
@@ -1458,7 +1458,7 @@ def load_sets()
   set90.rare = 0
   set90.mythicRare = 0
   set90.basicLand = 0
-  set90.releasedAt = "April 10, 2009"
+  set90.releasedAt = "2009-04-10"
   id = set90.save
 
   set91 = CardSet.new
@@ -1472,7 +1472,7 @@ def load_sets()
   set91.rare = 0
   set91.mythicRare = 0
   set91.basicLand = 0
-  set91.releasedAt = "October 30, 2009"
+  set91.releasedAt = "2009-10-30"
   id = set91.save
 
   set92 = CardSet.new
@@ -1486,7 +1486,7 @@ def load_sets()
   set92.rare = 0
   set92.mythicRare = 0
   set92.basicLand = 0
-  set92.releasedAt = "March 19, 2010"
+  set92.releasedAt = "2010-03-19"
   id = set92.save
 
   set93 = CardSet.new
@@ -1500,7 +1500,7 @@ def load_sets()
   set93.rare = 0
   set93.mythicRare = 0
   set93.basicLand = 0
-  set93.releasedAt = "September 3, 2010"
+  set93.releasedAt = "2010-09-03"
   id = set93.save
 
   set94 = CardSet.new
@@ -1514,7 +1514,7 @@ def load_sets()
   set94.rare = 0
   set94.mythicRare = 0
   set94.basicLand = 0
-  set94.releasedAt = "April 1, 2011"
+  set94.releasedAt = "2011-04-01"
   id = set94.save
 
   set95 = CardSet.new
@@ -1528,7 +1528,7 @@ def load_sets()
   set95.rare = 0
   set95.mythicRare = 0
   set95.basicLand = 0
-  set95.releasedAt = "September 2, 2011"
+  set95.releasedAt = "2011-09-02"
   id = set95.save
 
   set96 = CardSet.new
@@ -1542,7 +1542,7 @@ def load_sets()
   set96.rare = 0
   set96.mythicRare = 0
   set96.basicLand = 0
-  set96.releasedAt = "March 30, 2012"
+  set96.releasedAt = "2012-03-30"
   id = set96.save
 
   set97 = CardSet.new
@@ -1556,7 +1556,7 @@ def load_sets()
   set97.rare = 0
   set97.mythicRare = 0
   set97.basicLand = 0
-  set97.releasedAt = "September 7, 2012"
+  set97.releasedAt = "2012-09-07"
   id = set97.save
 
   set98 = CardSet.new
@@ -1570,7 +1570,7 @@ def load_sets()
   set98.rare = 0
   set98.mythicRare = 0
   set98.basicLand = 0
-  set98.releasedAt = "March 15, 2013"
+  set98.releasedAt = "2013-03-15"
   id = set98.save
   
   set98a = CardSet.new
@@ -1584,7 +1584,7 @@ def load_sets()
   set98a.rare = 0
   set98a.mythicRare = 0
   set98a.basicLand = 0
-  set98a.releasedAt = "September 6, 2013"
+  set98a.releasedAt = "2013-09-06"
   id = set98a.save
   
   set98b = CardSet.new
@@ -1598,7 +1598,7 @@ def load_sets()
   set98b.rare = 0
   set98b.mythicRare = 0
   set98b.basicLand = 0
-  set98b.releasedAt = "March 14, 2014"
+  set98b.releasedAt = "2014-03-14"
   id = set98b.save
 
 
@@ -1613,7 +1613,7 @@ def load_sets()
   set99.rare = 0
   set99.mythicRare = 0
   set99.basicLand = 0
-  set99.releasedAt = "August 29, 2008"
+  set99.releasedAt = "2008-08-29"
   id = set99.save
   
   set100 = CardSet.new
@@ -1627,7 +1627,7 @@ def load_sets()
   set100.rare = 0
   set100.mythicRare = 0
   set100.basicLand = 0
-  set100.releasedAt = "August 28, 2009"
+  set100.releasedAt = "2009-07-28"
   id = set100.save
 
   set101 = CardSet.new
@@ -1641,7 +1641,7 @@ def load_sets()
   set101.rare = 0
   set101.mythicRare = 0
   set101.basicLand = 0
-  set101.releasedAt = "August 27, 2010"
+  set101.releasedAt = "2010-08-27"
   id = set101.save
 
   set102 = CardSet.new
@@ -1655,7 +1655,7 @@ def load_sets()
   set102.rare = 0
   set102.mythicRare = 0
   set102.basicLand = 0
-  set102.releasedAt = "August 26, 2011"
+  set102.releasedAt = "2011-08-26"
   id = set102.save
 
   set103 = CardSet.new
@@ -1669,7 +1669,7 @@ def load_sets()
   set103.rare = 0
   set103.mythicRare = 0
   set103.basicLand = 0
-  set103.releasedAt = "August 31, 2012"
+  set103.releasedAt = "2012-08-31"
   id = set103.save
 
   set104 = CardSet.new
@@ -1683,7 +1683,7 @@ def load_sets()
   set104.rare = 0
   set104.mythicRare = 0
   set104.basicLand = 0
-  set104.releasedAt = "August 23, 2013"
+  set104.releasedAt = "2013-08-23"
   id = set104.save
 
   set105 = CardSet.new
@@ -1697,7 +1697,7 @@ def load_sets()
   set105.rare = 0
   set105.mythicRare = 1
   set105.basicLand = 0
-  set105.releasedAt = "November 20, 2009"
+  set105.releasedAt = "2009-11-20"
   id = set105.save
 
   set106 = CardSet.new
@@ -1711,7 +1711,7 @@ def load_sets()
   set106.rare = 0
   set106.mythicRare = 0
   set106.basicLand = 0
-  set106.releasedAt = "November 19, 2010"
+  set106.releasedAt = "2010-11-19"
   id = set106.save
 
   set107 = CardSet.new
@@ -1725,7 +1725,7 @@ def load_sets()
   set107.rare = 0
   set107.mythicRare = 0
   set107.basicLand = 0
-  set107.releasedAt = "November 18, 2011"
+  set107.releasedAt = "2011-11-18"
   id = set107.save
 
   set108 = CardSet.new
@@ -1739,7 +1739,7 @@ def load_sets()
   set108.rare = 55
   set108.mythicRare = 0
   set108.basicLand = 20
-  set108.releasedAt = "June 1, 1997"
+  set108.releasedAt = "1997-06-01"
   id = set108.save
 
   set108 = CardSet.new
@@ -1753,7 +1753,7 @@ def load_sets()
   set108.rare = 45
   set108.mythicRare = 0
   set108.basicLand = 15
-  set108.releasedAt = "June 1, 1998"
+  set108.releasedAt = "1998-06-01"
   id = set108.save
 
   set109 = CardSet.new
@@ -1767,7 +1767,7 @@ def load_sets()
   set109.rare = 55
   set109.mythicRare = 0
   set109.basicLand = 15
-  set109.releasedAt = "May 1, 1999"
+  set109.releasedAt = "1999-05-01"
   id = set109.save
 
   set110 = CardSet.new
@@ -1781,7 +1781,7 @@ def load_sets()
   set110.rare = 35
   set110.mythicRare = 0
   set110.basicLand = 20
-  set110.releasedAt = "July 1, 1999"
+  set110.releasedAt = "1999-07-01"
   id = set110.save
 
   set111 = CardSet.new
@@ -1795,7 +1795,7 @@ def load_sets()
   set111.rare = 2
   set111.mythicRare = 0
   set111.basicLand = 10
-  set111.releasedAt = "July 1, 2000"
+  set111.releasedAt = "2000-07-01"
   id = set111.save
 
   set112 = CardSet.new
@@ -1809,7 +1809,7 @@ def load_sets()
   set112.rare = 105
   set112.mythicRare = 0
   set112.basicLand = 12
-  set112.releasedAt = "January 10, 2011"
+  set112.releasedAt = "2011-01-10"
   id = set112.save
 
   set113 = CardSet.new
@@ -1823,7 +1823,7 @@ def load_sets()
   set113.rare = 28
   set113.mythicRare = 0
   set113.basicLand = 5
-  set113.releasedAt = "August 7, 1998"
+  set113.releasedAt = "1998-07-07"
   id = set113.save
 
   set114 = CardSet.new
@@ -1837,7 +1837,7 @@ def load_sets()
   set114.rare = 40
   set114.mythicRare = 0
   set114.basicLand = 5
-  set114.releasedAt = "November 20, 2004"
+  set114.releasedAt = "2004-11-20"
   id = set114.save
   
   set115 = CardSet.new
@@ -1851,7 +1851,7 @@ def load_sets()
   set115.rare = 53
   set115.mythicRare = 15
   set115.basicLand = 20
-  set115.releasedAt = "September 27, 2013"
+  set115.releasedAt = "2013-09-27"
   id = set115.save
   
   set116 = CardSet.new
@@ -1865,7 +1865,7 @@ def load_sets()
   set116.rare = 35
   set116.mythicRare = 10
   set116.basicLand = 0
-  set116.releasedAt = "February 7, 2014"
+  set116.releasedAt = "2014-02-07"
   id = set116.save
   
   #now lets relate the cards and sets 
@@ -1887,6 +1887,8 @@ def load_sets()
     s.save
   end
 end
+
+load_sets()
 
 
 

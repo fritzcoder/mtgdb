@@ -28,7 +28,7 @@ class Card
   key :rarity, String
   key :artist, String
   key :token, Boolean
-  key :releasedAt, Time
+  key :releasedAt, String
   
   many :rulings
   many :formats
@@ -39,7 +39,7 @@ end
 
 class Ruling
   include MongoMapper::EmbeddedDocument
-  key :releasedAt, Time
+  key :releasedAt, String
   key :rule, String
 end
 
