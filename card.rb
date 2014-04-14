@@ -28,6 +28,7 @@ class Card
   key :rarity, String
   key :artist, String
   key :token, Boolean
+  key :promo, Boolean
   key :releasedAt, String
   
   many :rulings
