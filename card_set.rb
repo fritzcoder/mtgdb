@@ -12,6 +12,7 @@ class CardSet
 	key :_id, String
 	key :name, String
 	key :block, String
+	key :type, String
 	key :core, Boolean
 	key :releasedAt, String
 	key :common, Integer
@@ -21,7 +22,6 @@ class CardSet
 	key :basicLand, Integer
 	key :other, Integer
 	key :description, String
-	key :wikipedia, String
 	key :cardIds, Array
   #many :cards#, :in => :card_ids
   #uncommenting in allows for :car_ids to be populated, however mongomapper
