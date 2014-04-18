@@ -59,7 +59,7 @@ def load_sets()
   set4 = CardSet.new
   set4.name = "Planechase 2012 Edition"
   set4._id = "PC2"
-  set4.type = "Expansion"
+  set4.type = "Non standard"
   set4.block = "Planechase"
   set4.description = 'The Planechase (2012 Edition) release consists of four 
   different game packs: "Chaos Reigns," "Night of the Ninja," 
@@ -91,7 +91,7 @@ def load_sets()
 
   set6 = CardSet.new
   set6.name = "Dark Ascension"
-  set1.type = "Expansion"
+  set6.type = "Expansion"
   set6.block = "Innistrad"
   set6._id = "DKA"
   set6.description = "Dark Ascension is a Magic: The Gathering expansion set released February 3, 2012. It is the second set of the Innistrad block. The tagline for the set is 'Command the Night'. It was first revealed at the 2011 Comic-Con in San Diego, California."
@@ -288,7 +288,7 @@ def load_sets()
   set17.name = "Masters Edition III"
   set17._id = "ME3"
   set17.type = "Online"
-  set17.block = "Master Editions"
+  set17.block = "Masters Editions"
   set17.description = "Masters Edition III consists mainly of cards from The Dark, Legends, and Portal Three Kingdoms. While The Dark and Legends reflect the era Masters Edition III cards should be mostly from, the Portal Three Kingdoms cards are arguably the most distinctive part of ME3 even though that set was released five years after Legends and The Dark. This is due to the fact that one of the most widely used creature abilities in Magic, 'Flying', is almost completely replaced by its Portal Three Kingdoms counterpart, 'Horsemanship'. The other mechanics employed in Masters Edition III are multicolored cards and Legendary Creatures. Masters Edition III has a minor tribal theme of Faeries, Kobolds, and Minotaurs are the tribes used in Masters Edition III. Masters Edition III also reprints six World Enchantments."
   set17.common = 75
   set17.uncommon = 70
@@ -432,6 +432,7 @@ def load_sets()
   set27 = CardSet.new
   set27.name = "Future Sight"
   set27.type = "Expansion"
+  set27.block = "Time Spiral"
   set27._id = "FUT"
   set27.description = 'Future Sight is an expansion set, codenamed "Pop", for the trading card game Magic: The Gathering. The set was released worldwide on May 4, 2007. The pre-release events for this set were held on April 21 and April 22, 2007.'
   set27.common = 60
@@ -776,7 +777,7 @@ def load_sets()
   set48._id = "M14"
   set48.type = "Core"
   set48.block = nil
-  set48.description = 'Magic 2014 is a Magic: The Gathering expansion set, released on July 19, 2013.[1] The tagline for the set is "Ignite your Spark."
+  set48.description = 'Magic 2014 is a Magic: The Gathering expansion set, released on July 19, 2013.The tagline for the set is "Ignite your Spark."
   Several new Magic 2014 cards and reprints have been released. The returning mechanics are Slivers, a series of creatures of which each grants an ability to each Sliver.'
   set48.common = 101
   set48.uncommon = 60
@@ -1363,7 +1364,7 @@ def load_sets()
   set84 = CardSet.new
   set84.name = "Beatdown Box Set"
   set84._id = "BTD"
-  set81.type = "Compilations-Reprint"
+  set84.type = "Compilations-Reprint"
   set84.block = nil
   set84.description = "Beatdown is a box set for the card game Magic: The Gathering, and the fourth compilation set. It was created for special reprint purposes only and was not legal in Standard at the time of its release. Beatdown was released as a pair of preconstructed decks combined with accessories, unlike the normal distribution of Magic cards in randomized packs. At the time of release it sold for around $30.00 MSRP. Alternate art was done for four cards: Sengir Vampire, Erhnam Djinn, Ball Lightning, and Clockwork Beast. The set is white-bordered, and the expansion symbol is a mace. There are no White cards in the set."
   set84.common = 122
