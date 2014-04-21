@@ -59,7 +59,7 @@ def load_sets()
   set4 = CardSet.new
   set4.name = "Planechase 2012 Edition"
   set4._id = "PC2"
-  set4.type = "Non standard"
+  set4.type = "Non-standard Legal"
   set4.block = "Planechase"
   set4.description = 'The Planechase (2012 Edition) release consists of four 
   different game packs: "Chaos Reigns," "Night of the Ninja," 
@@ -119,7 +119,7 @@ def load_sets()
 
   set8 = CardSet.new
   set8.name = "Commander"
-  set8.type = "Non-standard-legal"
+  set8.type = "Non-standard Legal"
   set8.block = "Commander"
   set8._id = "CMD"
   set8.description = 'The _Magic: The Gathering -- Commander_ release consists 
@@ -136,7 +136,7 @@ def load_sets()
 
   set8b = CardSet.new
   set8b.name = "Commander's Arsenal"
-  set8b.type = "Non-standard-legal"
+  set8b.type = "Non-standard Legal"
   set8b.block = "Commander"
   set8b._id = "CM1"
   set8b.description = "Commander's Arsenal is a set 18 premium foil cards, 10 oversized premium foil cards, and a couple of accessories. The set was release on November 2, 2012. Each card was a reprint of a card often found in Commander or EDH decks."
@@ -150,7 +150,7 @@ def load_sets()
 
   set8c = CardSet.new
   set8c.name = "Commander 2013 Edition"
-  set8c.type = "Non-standard-legal"
+  set8c.type = "Non-standard Legal"
   set8c.block = "Commander"
   set8c._id = "C13"
   set8c.description = "Commander is a series of five 100-card, three color Magic: the Gathering decks, meant as a supplement to the variant format initially known as 'Elder Dragon Highlander (EDH)'. Each deck is based around a legendary creature, called a 'Commander' or 'General'. No card other than basic lands appear more than once in each deck, and each deck contains three foil oversized legendary creature cards. This set is notable in that it is the first set printed outside of the normal booster pack expansions to have functionally new cards. There are 51 new cards, made specifically for multi-player games, featured in Commander."
@@ -273,7 +273,7 @@ def load_sets()
   set16 = CardSet.new
   set16.name = "Planechase"
   set16._id = "HOP"
-  set16.type = "Non-standard-legal"
+  set16.type = "Non-standard Legal"
   set16.block = "Planechase"
   set16.description = 'Planechase is a variant of Magic: The Gathering with an emphasis on multi-player games. The set utilizes new oversized Plane cards, cards that are based on various locations (Planes) within the Magic multiverse, to modify the rules of gameplay.'
   set16.common = 280
@@ -490,7 +490,7 @@ def load_sets()
 
   set30 = CardSet.new
   set30.name = "Coldsnap"
-  set14.type = "Expansion"
+  set30.type = "Expansion"
   set30.block = "Ice Age"
   set30._id = "CSP"
   set30.description = 'Coldsnap is the thirty-ninth Magic expansion and the third set in the Ice Age block, taking the place of Homelands.'
