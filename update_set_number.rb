@@ -10,7 +10,7 @@ require 'nokogiri'
 
 load 'card.rb'
 load 'card_set.rb'
-load 'sets.rb'
+#load 'sets.rb'
 
 include Mongo
 
