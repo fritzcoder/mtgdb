@@ -1882,6 +1882,20 @@ def load_sets()
   set117.releasedAt = "2014-05-02"
   id = set117.save
   
+  set118 = CardSet.new
+  set118.name = "Magic: The Gathering-Conspiracy"
+  set118._id = "CNS"
+  set118.type = "Non-standard Legal"
+  set118.block = nil
+  set118.description = "Conspiracy is a Magic: The Gathering format to be released on June 6, 2014 cryptically announced through a strange card at the Born of the Gods prerelease events at a game store in the Philippines. It's designed to be the first ever multiplayer draft format and is released as boosters, with the usual rarity makeup of 11 commons, 3 uncommons, 1 rare or mythic rare, and 1 token or marketing card. The tagline for the set is 'Pick. Plot. Play.' Many cards from past expansions show up in Conspiracy, but there are also 65 new cards. Excluding the 13 'Conspiracy'-type cards which can be only used in Conspiracy-drafts, all of the new cards are legal in eternal format."
+  set118.common = 89
+  set118.uncommon = 68
+  set118.rare = 43
+  set118.mythicRare = 10
+  set118.basicLand = 0
+  set118.releasedAt = "2014-06-06"
+  id = set118.save
+  
   #now lets relate the cards and sets 
   sets = CardSet.all
 

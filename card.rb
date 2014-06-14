@@ -40,6 +40,7 @@ end
 
 class Ruling
   include MongoMapper::EmbeddedDocument
+  key :_id, Integer
   key :releasedAt, String
   key :rule, String
 end

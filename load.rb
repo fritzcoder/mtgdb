@@ -10,20 +10,12 @@ require 'nokogiri'
 
 load 'card.rb'
 load 'card_set.rb'
-load 'sets.rb'
+#load 'sets.rb'
 
 include Mongo
 
 MongoMapper.connection = Mongo::Connection.new("localhost", 27017)
 MongoMapper.database = "mtg"
-
-
-def get_card_img(mvid)
-  open("card_images/" + mvid.to_s + ".jpeg", 'wb') do |file|
-    file << open("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + 
-    mvid.to_s + "&type=card").read
-  end
-end
 
 def get_card_details(mvid)
   details = Hash.new
@@ -78,14 +70,19 @@ startdb.execute( "select * from card" ) do |row|
    if exists == nil
      card = Card.new
      card._id = row['mvid']
+     
+     #get additional info from the gatherer
      details = get_card_details(card._id)
      card.setNumber = details["cardNumber"]
      card.artist = details["artist"]
+     card.flavor = details["flavor"]
+     ##############################
+     
      card.name = row['cardname']
      card.token = false
      card.searchName = card.name.gsub(' ','').downcase
      card.description = row['cardtext']
-     card.flavor = details["flavor"]
+     
      cardset = row['cardset']
    
      #put them together
@@ -140,11 +137,7 @@ startdb.execute( "select * from card" ) do |row|
    
      card.colors = colors
      card.rarity = row['rarity']
-   
-     if !File.exist?("card_images/" +  card._id.to_s + ".jpeg")
-       get_card_img(card._id)
-     end
-   
+     
      id = card.save
      print "Saved: " + card.name + "\n"
   else

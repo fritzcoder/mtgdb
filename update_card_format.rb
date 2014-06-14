@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'mongo'
-require 'sqlite3'
 gem 'activerecord'
 require 'active_record'
 require 'mongo_mapper'
@@ -50,16 +49,10 @@ def get_card_formats(c)
   puts "Saved formats: " + c.name
 end
 
-startdb = SQLite3::Database.new("cards.sqlite")
-startdb.results_as_hash = true
-startdb.execute( "select * from card" ) do |row|
-  
-   card = Card.find(row['mvid'])
-   
+Card.find_each(:order => :_id.desc) do |card|  
    if card.formats.length == 0
-     puts row['mvid'] 
      get_card_formats(card)
    else
-     puts "skip"
+     puts "Card " + card._id.to_s + " already has formats loaded."
    end
 end
