@@ -1896,6 +1896,20 @@ def load_sets()
   set118.releasedAt = "2014-06-06"
   id = set118.save
   
+  set119 = CardSet.new
+  set119.name = "Modern Event Deck 2014"
+  set119._id = "MD1"
+  set119.type = "Event Decks"
+  set119.block = nil
+  set119.description = "60-card deck, 15-card sideboard"
+  set119.common = 75
+  set119.uncommon = 0
+  set119.rare = 0
+  set119.mythicRare = 0
+  set119.basicLand = 0
+  set119.releasedAt = "2014-05-30"
+  id = set119.save
+  
   #now lets relate the cards and sets 
   sets = CardSet.all
 
